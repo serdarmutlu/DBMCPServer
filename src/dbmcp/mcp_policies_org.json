@@ -1,0 +1,61 @@
+{
+  "version": "1.0",
+  "name": "mcp-default-policy",
+  "description": "Default policy for a MCP server",
+  "rules": [
+    {
+      "name": "unrestricted-access-api-key",
+      "description": "All principals can list and execute tools, resources, and prompts",
+      "effect": "allow",
+      "principal_conditions": [
+        {
+          "path": "attributes.api_key",
+          "operator": "in",
+          "value": ["serdar"]
+        }
+      ],
+      "resource_conditions": [],
+      "actions": [
+        "list"]
+    },
+    {
+      "name": "allow-multiply-for-serdar",
+      "description": "Serdar API key'i olan principal için Multiply tool'unu çalıştırma izni",
+      "effect": "allow",
+      "principal_conditions": [
+        {
+          "path": "attributes.api_key",
+          "operator": "equals",
+          "value": "serdar"
+        }
+      ],
+      "resource_conditions": [
+        {
+          "path": "attributes.name",
+          "operator": "equals",
+          "value": "Multiply"
+        }
+      ],
+      "actions": [
+        "execute",
+        "list"
+      ]
+    },
+    {
+      "name": "unrestricted-access-x-user-id",
+      "description": "All principals can list and execute tools, resources, and prompts",
+      "effect": "allow",
+      "principal_conditions": [
+        {
+          "path": "attributes.user_id",
+          "operator": "in",
+          "value": ["arhan"]
+        }
+      ],
+      "resource_conditions": [],
+      "actions": [
+        "list"]
+    }
+  ],
+  "default_effect": "deny"
+}
