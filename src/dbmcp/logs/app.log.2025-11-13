@@ -1,0 +1,350 @@
+2025-11-13 02:12:02,960 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+2025-11-13 02:19:00,296 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-11-13 02:19:00,296 [INFO] main.py:12 - Started
+2025-11-13 02:19:00,296 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-11-13 02:19:00,297 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-11-13 02:19:00,297 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-11-13 02:19:00,297 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-11-13 02:19:00,297 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-11-13 02:19:00,297 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-11-13 02:19:00,297 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-11-13 02:19:00,297 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-11-13 02:19:00,299 [INFO] factory.py:76 - All fetchers initialized
+2025-11-13 02:19:00,302 [INFO] mcp_server.py:63 - Starting MCP Database Server...
+2025-11-13 02:19:10,357 [ERROR] postgresql_manager.py:59 - ❌ Connection failed for id=9: 
+2025-11-13 02:19:10,368 [ERROR] postgresql_manager.py:59 - ❌ Connection failed for id=10: no PostgreSQL user name specified in startup packet
+2025-11-13 02:19:10,382 [INFO] postgresql_manager.py:48 - 🔗 Connected: serdar@localhost:5432/omdb [id=5]
+2025-11-13 02:19:10,391 [ERROR] postgresql_manager.py:59 - ❌ Connection failed for id=12: no PostgreSQL user name specified in startup packet
+2025-11-13 02:19:10,422 [INFO] postgresql_manager.py:48 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-11-13 02:19:10,451 [INFO] postgresql_manager.py:48 - 🔗 Connected: serdar@pg2:5432/Adventureworks [id=14]
+2025-11-13 02:19:10,453 [INFO] postgresql_manager.py:115 - ✅ DB Manager initialized. Active pools: 3
+2025-11-13 02:19:10,540 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-11-13 02:42:00,432 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+2025-11-13 20:58:05,675 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-11-13 20:58:05,675 [INFO] main.py:12 - Started
+2025-11-13 20:58:05,675 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-11-13 20:58:05,675 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-11-13 20:58:05,675 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-11-13 20:58:05,675 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-11-13 20:58:05,675 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-11-13 20:58:05,675 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-11-13 20:58:05,675 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-11-13 20:58:05,675 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-11-13 20:58:05,678 [INFO] factory.py:76 - All fetchers initialized
+2025-11-13 20:58:05,681 [INFO] mcp_server.py:63 - Starting MCP Database Server...
+2025-11-13 20:58:15,766 [ERROR] postgresql_manager.py:59 - ❌ Connection failed for id=9: 
+2025-11-13 20:58:15,777 [ERROR] postgresql_manager.py:59 - ❌ Connection failed for id=10: no PostgreSQL user name specified in startup packet
+2025-11-13 20:58:15,809 [INFO] postgresql_manager.py:48 - 🔗 Connected: serdar@localhost:5432/omdb [id=5]
+2025-11-13 20:58:15,819 [ERROR] postgresql_manager.py:59 - ❌ Connection failed for id=12: no PostgreSQL user name specified in startup packet
+2025-11-13 20:58:15,852 [INFO] postgresql_manager.py:48 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-11-13 20:58:15,882 [INFO] postgresql_manager.py:48 - 🔗 Connected: serdar@pg2:5432/Adventureworks [id=14]
+2025-11-13 20:58:15,884 [INFO] postgresql_manager.py:115 - ✅ DB Manager initialized. Active pools: 3
+2025-11-13 20:58:15,959 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-11-13 20:59:18,837 [DEBUG] streamable_http_manager.py:221 - Creating new transport
+2025-11-13 20:59:18,837 [INFO] streamable_http_manager.py:233 - Created new transport with session ID: b7b2a094d4e644a2809c4446d20dec32
+2025-11-13 20:59:18,838 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 20:59:18,838 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2025-06-18","capabilities":{"experimental":{},"prompts":{"listChanged":true},"resources":{"subscribe":false,"listChanged":true},"tools":{"listChanged":true}},"serverInfo":{"name":"DBMCPServer \xf0\x9f\x9a\x80","version":"2.13.0.2"},"instructions":"\\n                            -   This server provides data analysis on Postgresql databases\\n                            "}}\r\n\r\n'
+2025-11-13 20:59:18,838 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 20:59:18,841 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 20:59:18,841 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 20:59:18,842 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 20:59:18,843 [INFO] server.py:674 - Processing request of type PingRequest
+2025-11-13 20:59:18,843 [DEBUG] server.py:676 - Dispatching request of type PingRequest
+2025-11-13 20:59:18,843 [DEBUG] server.py:723 - Response sent
+2025-11-13 20:59:18,843 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 20:59:18,843 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":1,"result":{}}\r\n\r\n'
+2025-11-13 20:59:18,843 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 20:59:18,845 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 20:59:18,845 [INFO] server.py:674 - Processing request of type ListToolsRequest
+2025-11-13 20:59:18,845 [DEBUG] server.py:676 - Dispatching request of type ListToolsRequest
+2025-11-13 20:59:18,845 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:Add | User-Agent: python-httpx/0.28.1
+2025-11-13 20:59:18,845 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:Multiply | User-Agent: python-httpx/0.28.1
+2025-11-13 20:59:18,845 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:list_all_connections_details | User-Agent: python-httpx/0.28.1
+2025-11-13 20:59:18,845 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:get_connection_detail | User-Agent: python-httpx/0.28.1
+2025-11-13 20:59:18,846 [DEBUG] server.py:723 - Response sent
+2025-11-13 20:59:18,846 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 20:59:18,846 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":2,"result":{"tools":[{"name":"Add","description":"Adds two numbers together","inputSchema":{"properties":{"a":{"type":"integer"},"b":{"type":"integer"}},"required":["a","b"],"type":"object"},"outputSchema":{"properties":{"result":{"type":"integer"}},"required":["result"],"type":"object","x-fastmcp-wrap-result":true},"_meta":{"_fastmcp":{"tags":["generic","math"]}}},{"name":"Multiply","description":"Multiplies two numbers","inputSchema":{"properties":{"a":{"type":"integer"},"b":{"type":"integer"}},"required":["a","b"],"type":"object"},"outputSchema":{"properties":{"result":{"type":"integer"}},"required":["result"],"type":"object","x-fastmcp-wrap-result":true},"_meta":{"_fastmcp":{"tags":["generic","math"]}}},{"name":"list_all_connections_details","description":"Gets list of all Postgresql connections defined in local database in MCP Server, returns in string format","inputSchema":{"properties":{},"type":"object"},"_meta":{"_fastmcp":{"tags":["metadata","postgresql"]}}},{"name":"get_connection_detail","description":"Gets detail of a single Postgresql connection defined in local database in MCP Server, returns in string format","inputSchema":{"properties":{"connection_id":{"type":"integer"}},"required":["connection_id"],"type":"object"},"_meta":{"_fastmcp":{"tags":["metadata","postgresql"]}}}]}}\r\n\r\n'
+2025-11-13 20:59:18,846 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 20:59:18,847 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 20:59:18,848 [INFO] server.py:674 - Processing request of type ListResourcesRequest
+2025-11-13 20:59:18,848 [DEBUG] server.py:676 - Dispatching request of type ListResourcesRequest
+2025-11-13 20:59:18,848 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: resources/list | MCP uri: mcp:resources:get_config | User-Agent: python-httpx/0.28.1
+2025-11-13 20:59:18,848 [DEBUG] server.py:723 - Response sent
+2025-11-13 20:59:18,848 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 20:59:18,848 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":3,"result":{"resources":[{"name":"get_config","uri":"data://config","description":"Provides the application configuration.","mimeType":"text/plain","_meta":{"_fastmcp":{"tags":[]}}}]}}\r\n\r\n'
+2025-11-13 20:59:18,848 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 20:59:18,850 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 20:59:18,850 [INFO] server.py:674 - Processing request of type ListPromptsRequest
+2025-11-13 20:59:18,850 [DEBUG] server.py:676 - Dispatching request of type ListPromptsRequest
+2025-11-13 20:59:18,850 [DEBUG] server.py:723 - Response sent
+2025-11-13 20:59:18,851 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 20:59:18,851 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":4,"result":{"prompts":[]}}\r\n\r\n'
+2025-11-13 20:59:18,851 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 20:59:18,852 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 20:59:18,852 [INFO] streamable_http.py:646 - Terminating session: b7b2a094d4e644a2809c4446d20dec32
+2025-11-13 20:59:18,852 [DEBUG] streamable_http.py:597 - Closing standalone SSE writer
+2025-11-13 20:59:18,852 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 20:59:46,374 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+2025-11-13 20:59:48,213 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-11-13 20:59:48,214 [INFO] main.py:12 - Started
+2025-11-13 20:59:48,214 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-11-13 20:59:48,214 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-11-13 20:59:48,214 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-11-13 20:59:48,214 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-11-13 20:59:48,214 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-11-13 20:59:48,214 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-11-13 20:59:48,214 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-11-13 20:59:48,214 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-11-13 20:59:48,216 [INFO] factory.py:76 - All fetchers initialized
+2025-11-13 20:59:48,219 [INFO] mcp_server.py:63 - Starting MCP Database Server...
+2025-11-13 20:59:48,280 [INFO] postgresql_manager.py:48 - 🔗 Connected: serdar@localhost:5432/omdb [id=5]
+2025-11-13 20:59:48,302 [INFO] postgresql_manager.py:48 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-11-13 20:59:48,318 [INFO] postgresql_manager.py:48 - 🔗 Connected: serdar@pg2:5432/Adventureworks [id=14]
+2025-11-13 20:59:48,319 [INFO] postgresql_manager.py:115 - ✅ DB Manager initialized. Active pools: 3
+2025-11-13 20:59:48,334 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-11-13 21:00:09,789 [DEBUG] streamable_http_manager.py:221 - Creating new transport
+2025-11-13 21:00:09,789 [INFO] streamable_http_manager.py:233 - Created new transport with session ID: c25f6770a86a469b8a03d0a425ef1f2e
+2025-11-13 21:00:09,790 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 21:00:09,790 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2025-06-18","capabilities":{"experimental":{},"prompts":{"listChanged":true},"resources":{"subscribe":false,"listChanged":true},"tools":{"listChanged":true}},"serverInfo":{"name":"DBMCPServer \xf0\x9f\x9a\x80","version":"2.13.0.2"},"instructions":"\\n                            -   This server provides data analysis on Postgresql databases\\n                            "}}\r\n\r\n'
+2025-11-13 21:00:09,790 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 21:00:09,793 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 21:00:09,793 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 21:00:09,795 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 21:00:09,795 [INFO] server.py:674 - Processing request of type PingRequest
+2025-11-13 21:00:09,795 [DEBUG] server.py:676 - Dispatching request of type PingRequest
+2025-11-13 21:00:09,795 [DEBUG] server.py:723 - Response sent
+2025-11-13 21:00:09,795 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 21:00:09,795 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":1,"result":{}}\r\n\r\n'
+2025-11-13 21:00:09,795 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 21:00:09,797 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 21:00:09,798 [INFO] server.py:674 - Processing request of type ListToolsRequest
+2025-11-13 21:00:09,798 [DEBUG] server.py:676 - Dispatching request of type ListToolsRequest
+2025-11-13 21:00:09,798 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:Add | User-Agent: python-httpx/0.28.1
+2025-11-13 21:00:09,798 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:Multiply | User-Agent: python-httpx/0.28.1
+2025-11-13 21:00:09,798 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:list_all_connections_details | User-Agent: python-httpx/0.28.1
+2025-11-13 21:00:09,798 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:get_connection_detail | User-Agent: python-httpx/0.28.1
+2025-11-13 21:00:09,798 [DEBUG] server.py:723 - Response sent
+2025-11-13 21:00:09,798 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 21:00:09,798 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":2,"result":{"tools":[{"name":"Add","description":"Adds two numbers together","inputSchema":{"properties":{"a":{"type":"integer"},"b":{"type":"integer"}},"required":["a","b"],"type":"object"},"outputSchema":{"properties":{"result":{"type":"integer"}},"required":["result"],"type":"object","x-fastmcp-wrap-result":true},"_meta":{"_fastmcp":{"tags":["generic","math"]}}},{"name":"Multiply","description":"Multiplies two numbers","inputSchema":{"properties":{"a":{"type":"integer"},"b":{"type":"integer"}},"required":["a","b"],"type":"object"},"outputSchema":{"properties":{"result":{"type":"integer"}},"required":["result"],"type":"object","x-fastmcp-wrap-result":true},"_meta":{"_fastmcp":{"tags":["generic","math"]}}},{"name":"list_all_connections_details","description":"Gets list of all Postgresql connections defined in local database in MCP Server, returns in string format","inputSchema":{"properties":{},"type":"object"},"_meta":{"_fastmcp":{"tags":["metadata","postgresql"]}}},{"name":"get_connection_detail","description":"Gets detail of a single Postgresql connection defined in local database in MCP Server, returns in string format","inputSchema":{"properties":{"connection_id":{"type":"integer"}},"required":["connection_id"],"type":"object"},"_meta":{"_fastmcp":{"tags":["metadata","postgresql"]}}}]}}\r\n\r\n'
+2025-11-13 21:00:09,798 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 21:00:09,800 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 21:00:09,800 [INFO] server.py:674 - Processing request of type ListResourcesRequest
+2025-11-13 21:00:09,800 [DEBUG] server.py:676 - Dispatching request of type ListResourcesRequest
+2025-11-13 21:00:09,801 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: resources/list | MCP uri: mcp:resources:get_config | User-Agent: python-httpx/0.28.1
+2025-11-13 21:00:09,801 [DEBUG] server.py:723 - Response sent
+2025-11-13 21:00:09,801 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 21:00:09,801 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":3,"result":{"resources":[{"name":"get_config","uri":"data://config","description":"Provides the application configuration.","mimeType":"text/plain","_meta":{"_fastmcp":{"tags":[]}}}]}}\r\n\r\n'
+2025-11-13 21:00:09,801 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 21:00:09,802 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 21:00:09,803 [INFO] server.py:674 - Processing request of type ListPromptsRequest
+2025-11-13 21:00:09,803 [DEBUG] server.py:676 - Dispatching request of type ListPromptsRequest
+2025-11-13 21:00:09,803 [DEBUG] server.py:723 - Response sent
+2025-11-13 21:00:09,803 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 21:00:09,803 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":4,"result":{"prompts":[]}}\r\n\r\n'
+2025-11-13 21:00:09,803 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 21:00:09,805 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 21:00:09,805 [INFO] streamable_http.py:646 - Terminating session: c25f6770a86a469b8a03d0a425ef1f2e
+2025-11-13 21:00:09,805 [DEBUG] streamable_http.py:597 - Closing standalone SSE writer
+2025-11-13 21:00:09,805 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 22:55:58,771 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+2025-11-13 22:56:00,794 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-11-13 22:56:00,794 [INFO] main.py:12 - Started
+2025-11-13 22:56:00,794 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-11-13 22:56:00,794 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-11-13 22:56:00,794 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-11-13 22:56:00,794 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-11-13 22:56:00,794 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-11-13 22:56:00,794 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-11-13 22:56:00,794 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-11-13 22:56:00,794 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-11-13 22:56:00,797 [INFO] factory.py:76 - All fetchers initialized
+2025-11-13 22:56:00,799 [INFO] mcp_server.py:63 - Starting MCP Database Server...
+2025-11-13 22:56:00,861 [INFO] postgresql_manager.py:48 - 🔗 Connected: serdar@localhost:5432/omdb [id=5]
+2025-11-13 22:56:00,880 [INFO] postgresql_manager.py:48 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-11-13 22:56:00,899 [INFO] postgresql_manager.py:48 - 🔗 Connected: serdar@pg2:5432/Adventureworks [id=14]
+2025-11-13 22:56:00,900 [INFO] postgresql_manager.py:115 - ✅ DB Manager initialized. Active pools: 3
+2025-11-13 22:56:00,920 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-11-13 23:17:02,968 [DEBUG] streamable_http_manager.py:221 - Creating new transport
+2025-11-13 23:17:02,969 [INFO] streamable_http_manager.py:233 - Created new transport with session ID: 3e1e73d30e654cae9ee9adaebd6c8465
+2025-11-13 23:17:02,977 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 23:17:02,977 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2025-06-18","capabilities":{"experimental":{},"prompts":{"listChanged":true},"resources":{"subscribe":false,"listChanged":true},"tools":{"listChanged":true}},"serverInfo":{"name":"DBMCPServer \xf0\x9f\x9a\x80","version":"2.13.0.2"},"instructions":"\\n                            -   This server provides data analysis on Postgresql databases\\n                            "}}\r\n\r\n'
+2025-11-13 23:17:02,977 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:17:02,980 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:17:02,980 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:17:02,982 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:17:02,982 [INFO] server.py:674 - Processing request of type ListToolsRequest
+2025-11-13 23:17:02,982 [DEBUG] server.py:676 - Dispatching request of type ListToolsRequest
+2025-11-13 23:17:02,983 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:Add | User-Agent: python-httpx/0.28.1
+2025-11-13 23:17:02,983 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:Multiply | User-Agent: python-httpx/0.28.1
+2025-11-13 23:17:02,983 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:list_all_connections_details | User-Agent: python-httpx/0.28.1
+2025-11-13 23:17:02,983 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:get_connection_detail | User-Agent: python-httpx/0.28.1
+2025-11-13 23:17:02,983 [DEBUG] server.py:723 - Response sent
+2025-11-13 23:17:02,983 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 23:17:02,983 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":1,"result":{"tools":[{"name":"Add","description":"Adds two numbers together","inputSchema":{"properties":{"a":{"type":"integer"},"b":{"type":"integer"}},"required":["a","b"],"type":"object"},"outputSchema":{"properties":{"result":{"type":"integer"}},"required":["result"],"type":"object","x-fastmcp-wrap-result":true},"_meta":{"_fastmcp":{"tags":["generic","math"]}}},{"name":"Multiply","description":"Multiplies two numbers","inputSchema":{"properties":{"a":{"type":"integer"},"b":{"type":"integer"}},"required":["a","b"],"type":"object"},"outputSchema":{"properties":{"result":{"type":"integer"}},"required":["result"],"type":"object","x-fastmcp-wrap-result":true},"_meta":{"_fastmcp":{"tags":["generic","math"]}}},{"name":"list_all_connections_details","description":"Gets list of all Postgresql connections defined in local database in MCP Server, returns in string format","inputSchema":{"properties":{},"type":"object"},"_meta":{"_fastmcp":{"tags":["metadata","postgresql"]}}},{"name":"get_connection_detail","description":"Gets detail of a single Postgresql connection defined in local database in MCP Server, returns in string format","inputSchema":{"properties":{"connection_id":{"type":"integer"}},"required":["connection_id"],"type":"object"},"_meta":{"_fastmcp":{"tags":["metadata","postgresql"]}}}]}}\r\n\r\n'
+2025-11-13 23:17:02,984 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:17:02,985 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:17:02,985 [INFO] streamable_http.py:646 - Terminating session: 3e1e73d30e654cae9ee9adaebd6c8465
+2025-11-13 23:17:02,985 [DEBUG] streamable_http.py:597 - Closing standalone SSE writer
+2025-11-13 23:17:02,985 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:17:22,181 [DEBUG] streamable_http_manager.py:221 - Creating new transport
+2025-11-13 23:17:22,181 [INFO] streamable_http_manager.py:233 - Created new transport with session ID: cb51b42516dd4654a232ca235d3400d7
+2025-11-13 23:17:22,181 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 23:17:22,182 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2025-06-18","capabilities":{"experimental":{},"prompts":{"listChanged":true},"resources":{"subscribe":false,"listChanged":true},"tools":{"listChanged":true}},"serverInfo":{"name":"DBMCPServer \xf0\x9f\x9a\x80","version":"2.13.0.2"},"instructions":"\\n                            -   This server provides data analysis on Postgresql databases\\n                            "}}\r\n\r\n'
+2025-11-13 23:17:22,182 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:17:22,184 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:17:22,184 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:17:22,185 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:17:22,186 [INFO] server.py:674 - Processing request of type ListToolsRequest
+2025-11-13 23:17:22,186 [DEBUG] server.py:676 - Dispatching request of type ListToolsRequest
+2025-11-13 23:17:22,186 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:Add | User-Agent: python-httpx/0.28.1
+2025-11-13 23:17:22,186 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:Multiply | User-Agent: python-httpx/0.28.1
+2025-11-13 23:17:22,186 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:list_all_connections_details | User-Agent: python-httpx/0.28.1
+2025-11-13 23:17:22,186 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:get_connection_detail | User-Agent: python-httpx/0.28.1
+2025-11-13 23:17:22,186 [DEBUG] server.py:723 - Response sent
+2025-11-13 23:17:22,187 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 23:17:22,187 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":1,"result":{"tools":[{"name":"Add","description":"Adds two numbers together","inputSchema":{"properties":{"a":{"type":"integer"},"b":{"type":"integer"}},"required":["a","b"],"type":"object"},"outputSchema":{"properties":{"result":{"type":"integer"}},"required":["result"],"type":"object","x-fastmcp-wrap-result":true},"_meta":{"_fastmcp":{"tags":["generic","math"]}}},{"name":"Multiply","description":"Multiplies two numbers","inputSchema":{"properties":{"a":{"type":"integer"},"b":{"type":"integer"}},"required":["a","b"],"type":"object"},"outputSchema":{"properties":{"result":{"type":"integer"}},"required":["result"],"type":"object","x-fastmcp-wrap-result":true},"_meta":{"_fastmcp":{"tags":["generic","math"]}}},{"name":"list_all_connections_details","description":"Gets list of all Postgresql connections defined in local database in MCP Server, returns in string format","inputSchema":{"properties":{},"type":"object"},"_meta":{"_fastmcp":{"tags":["metadata","postgresql"]}}},{"name":"get_connection_detail","description":"Gets detail of a single Postgresql connection defined in local database in MCP Server, returns in string format","inputSchema":{"properties":{"connection_id":{"type":"integer"}},"required":["connection_id"],"type":"object"},"_meta":{"_fastmcp":{"tags":["metadata","postgresql"]}}}]}}\r\n\r\n'
+2025-11-13 23:17:22,187 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:17:22,188 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:17:22,188 [INFO] streamable_http.py:646 - Terminating session: cb51b42516dd4654a232ca235d3400d7
+2025-11-13 23:17:22,189 [DEBUG] streamable_http.py:597 - Closing standalone SSE writer
+2025-11-13 23:17:22,189 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:18:05,868 [DEBUG] streamable_http_manager.py:221 - Creating new transport
+2025-11-13 23:18:05,869 [INFO] streamable_http_manager.py:233 - Created new transport with session ID: 8d4a8dfb6c7f4f138f9c34027d0a62c0
+2025-11-13 23:18:05,869 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 23:18:05,869 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2025-06-18","capabilities":{"experimental":{},"prompts":{"listChanged":true},"resources":{"subscribe":false,"listChanged":true},"tools":{"listChanged":true}},"serverInfo":{"name":"DBMCPServer \xf0\x9f\x9a\x80","version":"2.13.0.2"},"instructions":"\\n                            -   This server provides data analysis on Postgresql databases\\n                            "}}\r\n\r\n'
+2025-11-13 23:18:05,869 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:18:05,872 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:18:05,872 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:18:05,873 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:18:05,874 [INFO] server.py:674 - Processing request of type ListToolsRequest
+2025-11-13 23:18:05,874 [DEBUG] server.py:676 - Dispatching request of type ListToolsRequest
+2025-11-13 23:18:05,874 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:Add | User-Agent: python-httpx/0.28.1
+2025-11-13 23:18:05,874 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:Multiply | User-Agent: python-httpx/0.28.1
+2025-11-13 23:18:05,874 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:list_all_connections_details | User-Agent: python-httpx/0.28.1
+2025-11-13 23:18:05,874 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:get_connection_detail | User-Agent: python-httpx/0.28.1
+2025-11-13 23:18:05,874 [DEBUG] server.py:723 - Response sent
+2025-11-13 23:18:05,874 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 23:18:05,874 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":1,"result":{"tools":[{"name":"Add","description":"Adds two numbers together","inputSchema":{"properties":{"a":{"type":"integer"},"b":{"type":"integer"}},"required":["a","b"],"type":"object"},"outputSchema":{"properties":{"result":{"type":"integer"}},"required":["result"],"type":"object","x-fastmcp-wrap-result":true},"_meta":{"_fastmcp":{"tags":["generic","math"]}}},{"name":"Multiply","description":"Multiplies two numbers","inputSchema":{"properties":{"a":{"type":"integer"},"b":{"type":"integer"}},"required":["a","b"],"type":"object"},"outputSchema":{"properties":{"result":{"type":"integer"}},"required":["result"],"type":"object","x-fastmcp-wrap-result":true},"_meta":{"_fastmcp":{"tags":["generic","math"]}}},{"name":"list_all_connections_details","description":"Gets list of all Postgresql connections defined in local database in MCP Server, returns in string format","inputSchema":{"properties":{},"type":"object"},"_meta":{"_fastmcp":{"tags":["metadata","postgresql"]}}},{"name":"get_connection_detail","description":"Gets detail of a single Postgresql connection defined in local database in MCP Server, returns in string format","inputSchema":{"properties":{"connection_id":{"type":"integer"}},"required":["connection_id"],"type":"object"},"_meta":{"_fastmcp":{"tags":["metadata","postgresql"]}}}]}}\r\n\r\n'
+2025-11-13 23:18:05,874 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:18:05,876 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:18:05,876 [INFO] streamable_http.py:646 - Terminating session: 8d4a8dfb6c7f4f138f9c34027d0a62c0
+2025-11-13 23:18:05,876 [DEBUG] streamable_http.py:597 - Closing standalone SSE writer
+2025-11-13 23:18:05,876 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:36:26,893 [DEBUG] streamable_http_manager.py:221 - Creating new transport
+2025-11-13 23:36:26,894 [INFO] streamable_http_manager.py:233 - Created new transport with session ID: 76cbd160d6244dbd95faa9f91b2d6813
+2025-11-13 23:36:26,894 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 23:36:26,894 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2025-06-18","capabilities":{"experimental":{},"prompts":{"listChanged":true},"resources":{"subscribe":false,"listChanged":true},"tools":{"listChanged":true}},"serverInfo":{"name":"DBMCPServer \xf0\x9f\x9a\x80","version":"2.13.0.2"},"instructions":"\\n                            -   This server provides data analysis on Postgresql databases\\n                            "}}\r\n\r\n'
+2025-11-13 23:36:26,895 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:36:26,897 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:36:26,897 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:36:26,898 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:36:26,899 [INFO] server.py:674 - Processing request of type ListToolsRequest
+2025-11-13 23:36:26,899 [DEBUG] server.py:676 - Dispatching request of type ListToolsRequest
+2025-11-13 23:36:26,899 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:Add | User-Agent: python-httpx/0.28.1
+2025-11-13 23:36:26,899 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:Multiply | User-Agent: python-httpx/0.28.1
+2025-11-13 23:36:26,899 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:list_all_connections_details | User-Agent: python-httpx/0.28.1
+2025-11-13 23:36:26,899 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:get_connection_detail | User-Agent: python-httpx/0.28.1
+2025-11-13 23:36:26,900 [DEBUG] server.py:723 - Response sent
+2025-11-13 23:36:26,900 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 23:36:26,900 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":1,"result":{"tools":[{"name":"Add","description":"Adds two numbers together","inputSchema":{"properties":{"a":{"type":"integer"},"b":{"type":"integer"}},"required":["a","b"],"type":"object"},"outputSchema":{"properties":{"result":{"type":"integer"}},"required":["result"],"type":"object","x-fastmcp-wrap-result":true},"_meta":{"_fastmcp":{"tags":["generic","math"]}}},{"name":"Multiply","description":"Multiplies two numbers","inputSchema":{"properties":{"a":{"type":"integer"},"b":{"type":"integer"}},"required":["a","b"],"type":"object"},"outputSchema":{"properties":{"result":{"type":"integer"}},"required":["result"],"type":"object","x-fastmcp-wrap-result":true},"_meta":{"_fastmcp":{"tags":["generic","math"]}}},{"name":"list_all_connections_details","description":"Gets list of all Postgresql connections defined in local database in MCP Server, returns in string format","inputSchema":{"properties":{},"type":"object"},"_meta":{"_fastmcp":{"tags":["metadata","postgresql"]}}},{"name":"get_connection_detail","description":"Gets detail of a single Postgresql connection defined in local database in MCP Server, returns in string format","inputSchema":{"properties":{"connection_id":{"type":"integer"}},"required":["connection_id"],"type":"object"},"_meta":{"_fastmcp":{"tags":["metadata","postgresql"]}}}]}}\r\n\r\n'
+2025-11-13 23:36:26,900 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:36:26,901 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:36:26,901 [INFO] streamable_http.py:646 - Terminating session: 76cbd160d6244dbd95faa9f91b2d6813
+2025-11-13 23:36:26,901 [DEBUG] streamable_http.py:597 - Closing standalone SSE writer
+2025-11-13 23:36:26,901 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:36:29,562 [DEBUG] streamable_http_manager.py:221 - Creating new transport
+2025-11-13 23:36:29,562 [INFO] streamable_http_manager.py:233 - Created new transport with session ID: b46757d3a8234834be442671ceb40155
+2025-11-13 23:36:29,563 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 23:36:29,563 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2025-06-18","capabilities":{"experimental":{},"prompts":{"listChanged":true},"resources":{"subscribe":false,"listChanged":true},"tools":{"listChanged":true}},"serverInfo":{"name":"DBMCPServer \xf0\x9f\x9a\x80","version":"2.13.0.2"},"instructions":"\\n                            -   This server provides data analysis on Postgresql databases\\n                            "}}\r\n\r\n'
+2025-11-13 23:36:29,563 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:36:29,566 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:36:29,566 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:36:29,568 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:36:29,569 [INFO] server.py:674 - Processing request of type CallToolRequest
+2025-11-13 23:36:29,569 [DEBUG] server.py:676 - Dispatching request of type CallToolRequest
+2025-11-13 23:36:29,569 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/call | MCP uri: mcp:tools:Multiply | User-Agent: python-httpx/0.28.1
+2025-11-13 23:36:29,571 [DEBUG] server.py:723 - Response sent
+2025-11-13 23:36:29,571 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 23:36:29,571 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":1,"result":{"content":[{"type":"text","text":"4"}],"structuredContent":{"result":4},"isError":false}}\r\n\r\n'
+2025-11-13 23:36:29,571 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:36:29,573 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:36:29,573 [INFO] server.py:674 - Processing request of type ListToolsRequest
+2025-11-13 23:36:29,573 [DEBUG] server.py:676 - Dispatching request of type ListToolsRequest
+2025-11-13 23:36:29,574 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:Add | User-Agent: python-httpx/0.28.1
+2025-11-13 23:36:29,574 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:Multiply | User-Agent: python-httpx/0.28.1
+2025-11-13 23:36:29,574 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:list_all_connections_details | User-Agent: python-httpx/0.28.1
+2025-11-13 23:36:29,574 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:get_connection_detail | User-Agent: python-httpx/0.28.1
+2025-11-13 23:36:29,574 [DEBUG] server.py:723 - Response sent
+2025-11-13 23:36:29,574 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 23:36:29,574 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":2,"result":{"tools":[{"name":"Add","description":"Adds two numbers together","inputSchema":{"properties":{"a":{"type":"integer"},"b":{"type":"integer"}},"required":["a","b"],"type":"object"},"outputSchema":{"properties":{"result":{"type":"integer"}},"required":["result"],"type":"object","x-fastmcp-wrap-result":true},"_meta":{"_fastmcp":{"tags":["generic","math"]}}},{"name":"Multiply","description":"Multiplies two numbers","inputSchema":{"properties":{"a":{"type":"integer"},"b":{"type":"integer"}},"required":["a","b"],"type":"object"},"outputSchema":{"properties":{"result":{"type":"integer"}},"required":["result"],"type":"object","x-fastmcp-wrap-result":true},"_meta":{"_fastmcp":{"tags":["generic","math"]}}},{"name":"list_all_connections_details","description":"Gets list of all Postgresql connections defined in local database in MCP Server, returns in string format","inputSchema":{"properties":{},"type":"object"},"_meta":{"_fastmcp":{"tags":["metadata","postgresql"]}}},{"name":"get_connection_detail","description":"Gets detail of a single Postgresql connection defined in local database in MCP Server, returns in string format","inputSchema":{"properties":{"connection_id":{"type":"integer"}},"required":["connection_id"],"type":"object"},"_meta":{"_fastmcp":{"tags":["metadata","postgresql"]}}}]}}\r\n\r\n'
+2025-11-13 23:36:29,574 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:36:29,577 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:36:29,577 [INFO] streamable_http.py:646 - Terminating session: b46757d3a8234834be442671ceb40155
+2025-11-13 23:36:29,577 [DEBUG] streamable_http.py:597 - Closing standalone SSE writer
+2025-11-13 23:36:29,577 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:41:25,327 [DEBUG] streamable_http_manager.py:221 - Creating new transport
+2025-11-13 23:41:25,327 [INFO] streamable_http_manager.py:233 - Created new transport with session ID: 54a604a3f1ed46a8bff8d350fe840bd2
+2025-11-13 23:41:25,328 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 23:41:25,328 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2025-06-18","capabilities":{"experimental":{},"prompts":{"listChanged":true},"resources":{"subscribe":false,"listChanged":true},"tools":{"listChanged":true}},"serverInfo":{"name":"DBMCPServer \xf0\x9f\x9a\x80","version":"2.13.0.2"},"instructions":"\\n                            -   This server provides data analysis on Postgresql databases\\n                            "}}\r\n\r\n'
+2025-11-13 23:41:25,329 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:41:25,360 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:41:25,363 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:41:25,382 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:41:25,383 [INFO] server.py:674 - Processing request of type ListToolsRequest
+2025-11-13 23:41:25,383 [DEBUG] server.py:676 - Dispatching request of type ListToolsRequest
+2025-11-13 23:41:25,383 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:Add | User-Agent: python-httpx/0.28.1
+2025-11-13 23:41:25,383 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:Multiply | User-Agent: python-httpx/0.28.1
+2025-11-13 23:41:25,383 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:list_all_connections_details | User-Agent: python-httpx/0.28.1
+2025-11-13 23:41:25,383 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:get_connection_detail | User-Agent: python-httpx/0.28.1
+2025-11-13 23:41:25,383 [DEBUG] server.py:723 - Response sent
+2025-11-13 23:41:25,383 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 23:41:25,383 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":1,"result":{"tools":[{"name":"Add","description":"Adds two numbers together","inputSchema":{"properties":{"a":{"type":"integer"},"b":{"type":"integer"}},"required":["a","b"],"type":"object"},"outputSchema":{"properties":{"result":{"type":"integer"}},"required":["result"],"type":"object","x-fastmcp-wrap-result":true},"_meta":{"_fastmcp":{"tags":["generic","math"]}}},{"name":"Multiply","description":"Multiplies two numbers","inputSchema":{"properties":{"a":{"type":"integer"},"b":{"type":"integer"}},"required":["a","b"],"type":"object"},"outputSchema":{"properties":{"result":{"type":"integer"}},"required":["result"],"type":"object","x-fastmcp-wrap-result":true},"_meta":{"_fastmcp":{"tags":["generic","math"]}}},{"name":"list_all_connections_details","description":"Gets list of all Postgresql connections defined in local database in MCP Server, returns in string format","inputSchema":{"properties":{},"type":"object"},"_meta":{"_fastmcp":{"tags":["metadata","postgresql"]}}},{"name":"get_connection_detail","description":"Gets detail of a single Postgresql connection defined in local database in MCP Server, returns in string format","inputSchema":{"properties":{"connection_id":{"type":"integer"}},"required":["connection_id"],"type":"object"},"_meta":{"_fastmcp":{"tags":["metadata","postgresql"]}}}]}}\r\n\r\n'
+2025-11-13 23:41:25,384 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:41:25,401 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:41:25,401 [INFO] streamable_http.py:646 - Terminating session: 54a604a3f1ed46a8bff8d350fe840bd2
+2025-11-13 23:41:25,401 [DEBUG] streamable_http.py:597 - Closing standalone SSE writer
+2025-11-13 23:41:25,401 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:49:06,505 [DEBUG] streamable_http_manager.py:221 - Creating new transport
+2025-11-13 23:49:06,506 [INFO] streamable_http_manager.py:233 - Created new transport with session ID: a34d428b6a824611a600b310a56cf7b6
+2025-11-13 23:49:06,506 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 23:49:06,506 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2025-06-18","capabilities":{"experimental":{},"prompts":{"listChanged":true},"resources":{"subscribe":false,"listChanged":true},"tools":{"listChanged":true}},"serverInfo":{"name":"DBMCPServer \xf0\x9f\x9a\x80","version":"2.13.0.2"},"instructions":"\\n                            -   This server provides data analysis on Postgresql databases\\n                            "}}\r\n\r\n'
+2025-11-13 23:49:06,506 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:49:06,509 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:49:06,509 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:49:06,510 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:49:06,511 [INFO] server.py:674 - Processing request of type ListToolsRequest
+2025-11-13 23:49:06,511 [DEBUG] server.py:676 - Dispatching request of type ListToolsRequest
+2025-11-13 23:49:06,511 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:Add | User-Agent: python-httpx/0.28.1
+2025-11-13 23:49:06,511 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:Multiply | User-Agent: python-httpx/0.28.1
+2025-11-13 23:49:06,511 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:list_all_connections_details | User-Agent: python-httpx/0.28.1
+2025-11-13 23:49:06,511 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:get_connection_detail | User-Agent: python-httpx/0.28.1
+2025-11-13 23:49:06,511 [DEBUG] server.py:723 - Response sent
+2025-11-13 23:49:06,511 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 23:49:06,511 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":1,"result":{"tools":[{"name":"Add","description":"Adds two numbers together","inputSchema":{"properties":{"a":{"type":"integer"},"b":{"type":"integer"}},"required":["a","b"],"type":"object"},"outputSchema":{"properties":{"result":{"type":"integer"}},"required":["result"],"type":"object","x-fastmcp-wrap-result":true},"_meta":{"_fastmcp":{"tags":["generic","math"]}}},{"name":"Multiply","description":"Multiplies two numbers","inputSchema":{"properties":{"a":{"type":"integer"},"b":{"type":"integer"}},"required":["a","b"],"type":"object"},"outputSchema":{"properties":{"result":{"type":"integer"}},"required":["result"],"type":"object","x-fastmcp-wrap-result":true},"_meta":{"_fastmcp":{"tags":["generic","math"]}}},{"name":"list_all_connections_details","description":"Gets list of all Postgresql connections defined in local database in MCP Server, returns in string format","inputSchema":{"properties":{},"type":"object"},"_meta":{"_fastmcp":{"tags":["metadata","postgresql"]}}},{"name":"get_connection_detail","description":"Gets detail of a single Postgresql connection defined in local database in MCP Server, returns in string format","inputSchema":{"properties":{"connection_id":{"type":"integer"}},"required":["connection_id"],"type":"object"},"_meta":{"_fastmcp":{"tags":["metadata","postgresql"]}}}]}}\r\n\r\n'
+2025-11-13 23:49:06,511 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:49:06,513 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:49:06,513 [INFO] streamable_http.py:646 - Terminating session: a34d428b6a824611a600b310a56cf7b6
+2025-11-13 23:49:06,513 [DEBUG] streamable_http.py:597 - Closing standalone SSE writer
+2025-11-13 23:49:06,513 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:56:30,383 [DEBUG] streamable_http_manager.py:221 - Creating new transport
+2025-11-13 23:56:30,383 [INFO] streamable_http_manager.py:233 - Created new transport with session ID: 8de78a2959d34e0683f8fc76e5863954
+2025-11-13 23:56:30,384 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 23:56:30,384 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2025-06-18","capabilities":{"experimental":{},"prompts":{"listChanged":true},"resources":{"subscribe":false,"listChanged":true},"tools":{"listChanged":true}},"serverInfo":{"name":"DBMCPServer \xf0\x9f\x9a\x80","version":"2.13.0.2"},"instructions":"\\n                            -   This server provides data analysis on Postgresql databases\\n                            "}}\r\n\r\n'
+2025-11-13 23:56:30,384 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:56:31,084 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:56:31,087 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:56:31,106 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:56:31,107 [INFO] server.py:674 - Processing request of type ListToolsRequest
+2025-11-13 23:56:31,107 [DEBUG] server.py:676 - Dispatching request of type ListToolsRequest
+2025-11-13 23:56:31,108 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:Add | User-Agent: python-httpx/0.28.1
+2025-11-13 23:56:31,108 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:Multiply | User-Agent: python-httpx/0.28.1
+2025-11-13 23:56:31,108 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:list_all_connections_details | User-Agent: python-httpx/0.28.1
+2025-11-13 23:56:31,108 [INFO] middleware.py:152 - Authorized request: Rule unrestricted-access-api-key allowed the action in policy mcp-default-policy | MCP method: tools/list | MCP uri: mcp:tools:get_connection_detail | User-Agent: python-httpx/0.28.1
+2025-11-13 23:56:31,108 [DEBUG] server.py:723 - Response sent
+2025-11-13 23:56:31,108 [DEBUG] streamable_http.py:479 - Closing SSE writer
+2025-11-13 23:56:31,108 [DEBUG] sse.py:179 - chunk: b'event: message\r\ndata: {"jsonrpc":"2.0","id":1,"result":{"tools":[{"name":"Add","description":"Adds two numbers together","inputSchema":{"properties":{"a":{"type":"integer"},"b":{"type":"integer"}},"required":["a","b"],"type":"object"},"outputSchema":{"properties":{"result":{"type":"integer"}},"required":["result"],"type":"object","x-fastmcp-wrap-result":true},"_meta":{"_fastmcp":{"tags":["generic","math"]}}},{"name":"Multiply","description":"Multiplies two numbers","inputSchema":{"properties":{"a":{"type":"integer"},"b":{"type":"integer"}},"required":["a","b"],"type":"object"},"outputSchema":{"properties":{"result":{"type":"integer"}},"required":["result"],"type":"object","x-fastmcp-wrap-result":true},"_meta":{"_fastmcp":{"tags":["generic","math"]}}},{"name":"list_all_connections_details","description":"Gets list of all Postgresql connections defined in local database in MCP Server, returns in string format","inputSchema":{"properties":{},"type":"object"},"_meta":{"_fastmcp":{"tags":["metadata","postgresql"]}}},{"name":"get_connection_detail","description":"Gets detail of a single Postgresql connection defined in local database in MCP Server, returns in string format","inputSchema":{"properties":{"connection_id":{"type":"integer"}},"required":["connection_id"],"type":"object"},"_meta":{"_fastmcp":{"tags":["metadata","postgresql"]}}}]}}\r\n\r\n'
+2025-11-13 23:56:31,108 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
+2025-11-13 23:56:32,022 [DEBUG] streamable_http_manager.py:215 - Session already exists, handling request directly
+2025-11-13 23:56:32,022 [INFO] streamable_http.py:646 - Terminating session: 8de78a2959d34e0683f8fc76e5863954
+2025-11-13 23:56:32,022 [DEBUG] streamable_http.py:597 - Closing standalone SSE writer
+2025-11-13 23:56:32,022 [DEBUG] sse.py:200 - Got event: http.disconnect. Stop streaming.
