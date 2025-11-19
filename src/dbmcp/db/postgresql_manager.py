@@ -210,6 +210,39 @@ class PostgresqlManager:
                     await conn.execute(sql, *params)
                     return []
 
+    # --- READ COLUMNS ---
+    async def find_columns_by_table_name(self, connection_id: int, schema_name: str, table_name: str):
+        sql = """
+            SELECT * FROM information_schema.columns
+            WHERE table_schema= $1 and table_name = $2
+            ORDER BY ordinal_position
+        """
+        return await self.execute_query(connection_id, sql,schema_name, table_name)
+
+    async def find_tables_by_schema_name(self, connection_id: int, schema_name: str):
+        sql = """
+            SELECT * FROM information_schema.tables
+            WHERE table_schema = $1
+            ORDER BY table_name
+        """
+        return await self.execute_query(connection_id, sql, schema_name)
+
+    async def find_all_tables(self, connection_id: int):
+        sql = "SELECT * FROM information_schema.tables ORDER BY table_schema, table_name"
+        return await self.execute_query(connection_id, sql)
+
+    async def execute_custom_query(self, connection_id: int, sql: str):
+        return await self.execute_query(connection_id, sql)
+
+    async def execute_custom_update(self, connection_id: int, sql: str):
+        await self.execute_query(connection_id, sql)
+        return {"status": "ok"}
+
+    async def count_rows_in_table(self, connection_id: int, table_name: str):
+        sql = f"SELECT COUNT(*) FROM {table_name}"
+        rows = await self.execute_query(connection_id, sql)
+        return rows[0]["count"] if rows else 0
+
     # ------------------------------------------------------------------ #
     # Yardımcılar
     # ------------------------------------------------------------------ #

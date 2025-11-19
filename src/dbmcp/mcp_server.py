@@ -10,6 +10,8 @@ from client_manager import ClientManager
 
 from tools.math_tools import register_math_tools
 from tools.metadata_tools import register_metadata_tools
+from tools.postgresql_tools import register_postgresql_tools
+
 from routes.sessions_routes import register_session_routes
 from routes.metadata_connection_routes import register_connection_routes
 from resources.test_resources import register_test_resources
@@ -53,6 +55,7 @@ class MCPServer():
         # Tool ve route kayıtları
         register_math_tools(self.mcpserver)
         register_metadata_tools(self.mcpserver)
+        register_postgresql_tools(self.mcpserver)
         register_test_resources(self.mcpserver)
         # register_session_routes(self.mcpserver, self.client_manager)
         register_connection_routes(self.mcpserver, self.metadata_manager, self.db_manager)
