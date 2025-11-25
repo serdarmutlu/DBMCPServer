@@ -17,11 +17,20 @@ from routes.metadata_connection_routes import register_connection_routes
 from resources.test_resources import register_test_resources
 
 from eunomia_mcp import create_eunomia_middleware, utils
+from starlette.middleware.cors import CORSMiddleware
+from starlette.applications import Starlette
+from starlette.routing import Mount
+import uvicorn
 
 import logging
 from fastmcp.server.middleware import Middleware, MiddlewareContext, CallNext
 
 logger = logging.getLogger(__name__)
+
+# Define routing structure
+ROOT_URL = "http://localhost:8000"
+MOUNT_PREFIX = "/api"
+MCP_PATH = "/mcp"
 
 class CustomMiddleware(Middleware):
     async def on_call_tool(
@@ -37,9 +46,15 @@ class MCPServer():
     def __init__(self, settings: Settings):
         self.settings = settings
         self.mcpserver = FastMCP(name="DBMCPServer 🚀",
-                                 instructions="""
-                            -   This server provides data analysis on Postgresql databases
-                            """)
+                                instructions="""
+                                -   This server provides data analysis on Postgresql databases
+                                """,
+                                stateless_http=True,
+                                json_response=True)
+
+
+        # Create MCP app
+        mcp_app = self.mcpserver.http_app(path=MCP_PATH)
 
         # Add authorization eunomia middleware
         eunomia_middleware = create_eunomia_middleware(policy_file="mcp_policies.json")
@@ -66,7 +81,26 @@ class MCPServer():
         logger.info("Starting MCP Database Server...")
         await initialize_metadata_manager()
         await initialize_postgresql_manager()
-        await self.mcpserver.run_async(transport="http", port=8000, path="/mcp") # path="/api/mcp" transport=http for new clients
+        # await self.mcpserver.run_async(transport="http", port=8000, path="/mcp") # path="/api/mcp" transport=http for new clients
+
+        app = self.mcpserver.http_app()
+
+        origins = [
+            "http://localhost:3000",
+            "http://127.0.0.1:3000"
+        ]
+
+        app.add_middleware(
+            CORSMiddleware,
+            allow_origins=origins,  # Allow all origins for development; restrict in production
+            allow_credentials=True,
+            allow_methods=["*"],
+            allow_headers=["*"],
+        )
+        config = uvicorn.Config(app, host="0.0.0.0", port=8000)
+        server = uvicorn.Server(config)
+        await server.serve()
+
         print(__name__)
 
     async def stop(self):

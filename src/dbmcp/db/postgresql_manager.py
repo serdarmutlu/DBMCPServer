@@ -4,6 +4,8 @@ import logging
 from contextlib import asynccontextmanager
 from typing import Any, Dict, List, Optional
 from .metadata_manager import get_metadata_manager_instance
+from config.settings import get_settings
+
 
 import asyncpg
 from .encryption import decrypt_password   # <- mevcut dosyandaki fonksiyon
@@ -34,8 +36,8 @@ class DatabaseConnection:
                 database=self.connection_info["database_name"],
                 user=self.connection_info["username"],
                 password=password,
-                min_size=1,
-                max_size=5,
+                min_size=get_settings().db_pool_min_size,
+                max_size=get_settings().db_pool_max_size,
                 timeout=10.0,
                 statement_cache_size=1024,
             )

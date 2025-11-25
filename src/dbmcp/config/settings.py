@@ -2,11 +2,18 @@ import logging
 from typing import Optional
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
+import socket
 
 logger = logging.getLogger(__name__)
 
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
+
+    if socket.gethostname() == "Serdars-MBP-M3":
+        model_config = SettingsConfigDict(env_file="mac.env", env_file_encoding="utf-8")
+    elif socket.gethostname() == "db-mcp-server":
+        model_config = SettingsConfigDict(env_file="oci.env", env_file_encoding="utf-8")
+    else:
+        model_config = SettingsConfigDict(env_file="default.env", env_file_encoding="utf-8")
 
     # Session
     session_timeout_minutes: int = Field(default=30)
@@ -29,6 +36,10 @@ class Settings(BaseSettings):
     default_database_username: Optional[str] = None
     default_database_password: Optional[str] = None
 
+    # DB Pool
+    db_pool_min_size: int = Field(default=1)
+    db_pool_max_size: int = Field(default=5)
+
     eunomia_policy_file: Optional[str] = None
 
     def get_metadata_db_url(self) -> str:
@@ -40,7 +51,7 @@ class Settings(BaseSettings):
         )
 
 def get_settings() -> Settings:
-    """Singleton-style accessor to avoid reloading .env multiple times."""
+    """Singleton-style accessor to avoid reloading default.env multiple times."""
     if not hasattr(get_settings, "_instance"):
         get_settings._instance = Settings()
     return get_settings._instance
