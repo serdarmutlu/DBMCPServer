@@ -7,6 +7,7 @@ import socket
 logger = logging.getLogger(__name__)
 
 class Settings(BaseSettings):
+    print("Host Name is:", socket.gethostname())
 
     if socket.gethostname() == "Serdars-MBP-M3":
         model_config = SettingsConfigDict(env_file="mac.env", env_file_encoding="utf-8")
