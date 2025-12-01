@@ -1,245 +1,492 @@
-2025-11-27 11:54:55,482 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
-2025-11-27 11:54:55,482 [INFO] main.py:12 - Started
-2025-11-27 11:54:55,482 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
-2025-11-27 11:54:55,483 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
-2025-11-27 11:54:55,483 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
-2025-11-27 11:54:55,483 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
-2025-11-27 11:54:55,483 [DEBUG] server.py:243 - Registering handler for PromptListRequest
-2025-11-27 11:54:55,483 [DEBUG] server.py:486 - Registering handler for CallToolRequest
-2025-11-27 11:54:55,483 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
-2025-11-27 11:54:55,483 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
-2025-11-27 11:54:55,486 [INFO] factory.py:76 - All fetchers initialized
-2025-11-27 11:54:55,490 [INFO] mcp_server.py:81 - Starting MCP Database Server...
-2025-11-27 14:20:37,070 [INFO] main.py:12 - Started
-2025-11-27 14:20:37,071 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
-2025-11-27 14:20:37,071 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
-2025-11-27 14:20:37,071 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
-2025-11-27 14:20:37,071 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
-2025-11-27 14:20:37,071 [DEBUG] server.py:243 - Registering handler for PromptListRequest
-2025-11-27 14:20:37,071 [DEBUG] server.py:486 - Registering handler for CallToolRequest
-2025-11-27 14:20:37,071 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
-2025-11-27 14:20:37,071 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
-2025-11-27 14:20:37,081 [INFO] factory.py:76 - All fetchers initialized
-2025-11-27 14:20:37,097 [INFO] mcp_server.py:81 - Starting MCP Database Server...
-2025-11-27 14:25:32,940 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
-2025-11-27 14:25:32,940 [INFO] main.py:12 - Started
-2025-11-27 14:25:32,941 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
-2025-11-27 14:25:32,941 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
-2025-11-27 14:25:32,941 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
-2025-11-27 14:25:32,941 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
-2025-11-27 14:25:32,941 [DEBUG] server.py:243 - Registering handler for PromptListRequest
-2025-11-27 14:25:32,941 [DEBUG] server.py:486 - Registering handler for CallToolRequest
-2025-11-27 14:25:32,941 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
-2025-11-27 14:25:32,941 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
-2025-11-27 14:25:32,944 [INFO] factory.py:76 - All fetchers initialized
-2025-11-27 14:25:32,947 [INFO] mcp_server.py:81 - Starting MCP Database Server...
-2025-11-27 14:25:57,342 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
-2025-11-27 14:25:57,343 [INFO] main.py:12 - Started
-2025-11-27 14:25:57,343 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
-2025-11-27 14:25:57,343 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
-2025-11-27 14:25:57,343 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
-2025-11-27 14:25:57,343 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
-2025-11-27 14:25:57,343 [DEBUG] server.py:243 - Registering handler for PromptListRequest
-2025-11-27 14:25:57,343 [DEBUG] server.py:486 - Registering handler for CallToolRequest
-2025-11-27 14:25:57,343 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
-2025-11-27 14:25:57,343 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
-2025-11-27 14:25:57,346 [INFO] factory.py:76 - All fetchers initialized
-2025-11-27 14:25:57,348 [INFO] mcp_server.py:81 - Starting MCP Database Server...
-2025-11-27 14:25:57,447 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdar@localhost:5432/omdb [id=5]
-2025-11-27 14:25:57,471 [INFO] postgresql_manager.py:50 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
-2025-11-27 14:25:57,492 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdar@pg2:5432/Adventureworks [id=14]
-2025-11-27 14:25:57,493 [INFO] postgresql_manager.py:117 - ✅ DB Manager initialized. Active pools: 3
-2025-11-27 14:25:57,530 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
-2025-11-27 14:41:41,667 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
-2025-11-27 14:42:10,112 [INFO] main.py:12 - Started
-2025-11-27 14:42:10,112 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
-2025-11-27 14:42:10,113 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
-2025-11-27 14:42:10,113 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
-2025-11-27 14:42:10,113 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
-2025-11-27 14:42:10,113 [DEBUG] server.py:243 - Registering handler for PromptListRequest
-2025-11-27 14:42:10,113 [DEBUG] server.py:486 - Registering handler for CallToolRequest
-2025-11-27 14:42:10,113 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
-2025-11-27 14:42:10,113 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
-2025-11-27 14:42:10,122 [INFO] factory.py:76 - All fetchers initialized
-2025-11-27 14:42:10,138 [INFO] mcp_server.py:81 - Starting MCP Database Server...
-2025-11-27 14:42:14,799 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdar@localhost:5432/omdb [id=5]
-2025-11-27 14:42:14,825 [INFO] postgresql_manager.py:50 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
-2025-11-27 14:42:14,833 [ERROR] postgresql_manager.py:61 - ❌ Connection failed for id=14: [Errno 61] Connect call failed ('192.168.139.200', 5432)
-2025-11-27 14:42:14,833 [INFO] postgresql_manager.py:117 - ✅ DB Manager initialized. Active pools: 2
-2025-11-27 14:42:14,913 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
-2025-11-27 14:43:38,699 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
-2025-11-27 14:43:38,782 [ERROR] base_events.py:1879 - Task exception was never retrieved
-future: <Task finished name='Task-1' coro=<main() done, defined at /Users/serdarmutlu/Projects/mcp/python/DBMCPServer/src/dbmcp/main.py:11> exception=KeyboardInterrupt()>
+2025-12-01 11:20:23,476 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 11:20:23,476 [INFO] main.py:11 - Started
+2025-12-01 11:20:23,476 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 11:20:23,477 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 11:20:23,477 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 11:20:23,477 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 11:20:23,477 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 11:20:23,477 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 11:20:23,477 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 11:20:23,477 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 11:20:23,480 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 11:20:23,484 [INFO] mcp_server.py:109 - Starting MCP Database Server...
+2025-12-01 11:20:23,589 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 11:20:33,592 [ERROR] postgresql_manager.py:61 - ❌ Connection failed for id=13: 
+2025-12-01 11:20:36,639 [ERROR] postgresql_manager.py:61 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 11:20:36,640 [INFO] postgresql_manager.py:117 - ✅ DB Manager initialized. Active pools: 1
+2025-12-01 11:20:36,687 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-12-01 11:20:57,435 [DEBUG] streamable_http_manager.py:160 - Stateless mode: Creating new transport for this request
+2025-12-01 11:20:57,436 [INFO] streamable_http.py:646 - Terminating session: None
+2025-12-01 11:20:57,437 [ERROR] streamable_http.py:895 - Error in message router
 Traceback (most recent call last):
-  File "/Applications/PyCharm.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py", line 2392, in <module>
-  File "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/src/dbmcp/main.py", line 18, in <module>
-    asyncio.run(main())
-  File "/Applications/PyCharm.app/Contents/plugins/python/helpers-pro/pydevd_asyncio/pydevd_nest_asyncio.py", line 138, in run
-    return loop.run_until_complete(task)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Applications/PyCharm.app/Contents/plugins/python/helpers-pro/pydevd_asyncio/pydevd_nest_asyncio.py", line 234, in run_until_complete
-    self._run_once()
-  File "/Applications/PyCharm.app/Contents/plugins/python/helpers-pro/pydevd_asyncio/pydevd_nest_asyncio.py", line 286, in _run_once
-    handle._run()
-  File "/opt/homebrew/Cellar/python@3.13/3.13.9_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/events.py", line 89, in _run
-    self._context.run(self._callback, *self._args)
-  File "/opt/homebrew/Cellar/python@3.13/3.13.9_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 386, in __wakeup
-    self.__step()
-  File "/Applications/PyCharm.app/Contents/plugins/python/helpers-pro/pydevd_asyncio/pydevd_nest_asyncio.py", line 394, in step
-    step_orig(task, exc)
-  File "/opt/homebrew/Cellar/python@3.13/3.13.9_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 293, in __step
-    self.__step_run_and_handle_result(exc)
-  File "/opt/homebrew/Cellar/python@3.13/3.13.9_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 304, in __step_run_and_handle_result
-    result = coro.send(None)
-             ^^^^^^^^^^^^^^^
-  File "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/src/dbmcp/main.py", line 15, in main
-    await mcp_server.start()
-  File "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/src/dbmcp/mcp_server.py", line 102, in start
-    await server.serve()
-  File "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 70, in serve
-    with self.capture_signals():
-         ^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/homebrew/Cellar/python@3.13/3.13.9_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 148, in __exit__
-    next(self.gen)
-  File "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 331, in capture_signals
-    signal.raise_signal(captured_signal)
-KeyboardInterrupt
-2025-11-27 14:43:46,778 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
-2025-11-27 14:43:46,778 [INFO] main.py:12 - Started
-2025-11-27 14:43:46,778 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
-2025-11-27 14:43:46,778 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
-2025-11-27 14:43:46,778 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
-2025-11-27 14:43:46,779 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
-2025-11-27 14:43:46,779 [DEBUG] server.py:243 - Registering handler for PromptListRequest
-2025-11-27 14:43:46,779 [DEBUG] server.py:486 - Registering handler for CallToolRequest
-2025-11-27 14:43:46,779 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
-2025-11-27 14:43:46,779 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
-2025-11-27 14:43:46,781 [INFO] factory.py:76 - All fetchers initialized
-2025-11-27 14:43:46,784 [INFO] mcp_server.py:81 - Starting MCP Database Server...
-2025-11-27 14:43:46,841 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdar@localhost:5432/omdb [id=5]
-2025-11-27 14:43:46,859 [INFO] postgresql_manager.py:50 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
-2025-11-27 14:43:46,870 [ERROR] postgresql_manager.py:61 - ❌ Connection failed for id=14: [Errno 61] Connect call failed ('192.168.139.200', 5432)
-2025-11-27 14:43:46,870 [INFO] postgresql_manager.py:117 - ✅ DB Manager initialized. Active pools: 2
-2025-11-27 14:43:46,887 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
-2025-11-27 14:43:56,093 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
-2025-11-27 14:45:06,437 [INFO] main.py:12 - Started
-2025-11-27 14:45:06,437 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
-2025-11-27 14:45:06,437 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
-2025-11-27 14:45:06,438 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
-2025-11-27 14:45:06,438 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
-2025-11-27 14:45:06,438 [DEBUG] server.py:243 - Registering handler for PromptListRequest
-2025-11-27 14:45:06,438 [DEBUG] server.py:486 - Registering handler for CallToolRequest
-2025-11-27 14:45:06,438 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
-2025-11-27 14:45:06,438 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
-2025-11-27 14:45:06,447 [INFO] factory.py:76 - All fetchers initialized
-2025-11-27 14:45:06,461 [INFO] mcp_server.py:81 - Starting MCP Database Server...
-2025-11-27 14:46:25,620 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdar@localhost:5432/omdb [id=5]
-2025-11-27 14:46:35,496 [INFO] postgresql_manager.py:50 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
-2025-11-27 14:48:14,547 [ERROR] base_events.py:1879 - Task exception was never retrieved
-future: <Task finished name='Task-1' coro=<main() done, defined at /Users/serdarmutlu/Projects/mcp/python/DBMCPServer/src/dbmcp/main.py:11> exception=KeyboardInterrupt()>
+  File "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/.venv/lib/python3.13/site-packages/mcp/server/streamable_http.py", line 847, in message_router
+    async for session_message in write_stream_reader:
+    ...<45 lines>...
+            )
+  File "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/.venv/lib/python3.13/site-packages/anyio/abc/_streams.py", line 41, in __anext__
+    return await self.receive()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/.venv/lib/python3.13/site-packages/anyio/streams/memory.py", line 111, in receive
+    return self.receive_nowait()
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/.venv/lib/python3.13/site-packages/anyio/streams/memory.py", line 93, in receive_nowait
+    raise ClosedResourceError
+anyio.ClosedResourceError
+2025-12-01 11:20:57,441 [DEBUG] session.py:426 - Read stream closed by client
+2025-12-01 11:21:12,618 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+2025-12-01 11:49:00,927 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 11:49:00,927 [INFO] main.py:11 - Started
+2025-12-01 11:49:00,927 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 11:49:00,927 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 11:49:00,927 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 11:49:00,927 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 11:49:00,927 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 11:49:00,927 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 11:49:00,927 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 11:49:00,927 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 11:49:00,930 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 11:49:00,933 [INFO] mcp_server.py:107 - Starting MCP Database Server...
+2025-12-01 11:49:19,111 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 11:49:19,112 [INFO] main.py:11 - Started
+2025-12-01 11:49:19,112 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 11:49:19,112 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 11:49:19,112 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 11:49:19,112 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 11:49:19,112 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 11:49:19,112 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 11:49:19,112 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 11:49:19,112 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 11:49:19,115 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 11:49:19,118 [INFO] mcp_server.py:107 - Starting MCP Database Server...
+2025-12-01 11:49:44,598 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 11:49:44,599 [INFO] main.py:11 - Started
+2025-12-01 11:49:44,599 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 11:49:44,599 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 11:49:44,599 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 11:49:44,599 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 11:49:44,599 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 11:49:44,599 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 11:49:44,599 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 11:49:44,599 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 11:49:44,601 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 11:49:44,605 [INFO] mcp_server.py:107 - Starting MCP Database Server...
+2025-12-01 11:49:44,657 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 11:49:44,682 [INFO] postgresql_manager.py:50 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-12-01 11:49:44,724 [ERROR] postgresql_manager.py:61 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 11:49:44,724 [INFO] postgresql_manager.py:117 - ✅ DB Manager initialized. Active pools: 2
+2025-12-01 11:49:44,736 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-12-01 11:49:50,670 [DEBUG] streamable_http_manager.py:160 - Stateless mode: Creating new transport for this request
+2025-12-01 11:49:50,672 [INFO] streamable_http.py:646 - Terminating session: None
+2025-12-01 11:49:50,672 [ERROR] streamable_http.py:895 - Error in message router
 Traceback (most recent call last):
-  File "/Applications/PyCharm.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py", line 2392, in <module>
-  File "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/src/dbmcp/main.py", line 18, in <module>
-    asyncio.run(main())
-  File "/Applications/PyCharm.app/Contents/plugins/python/helpers-pro/pydevd_asyncio/pydevd_nest_asyncio.py", line 138, in run
-    return loop.run_until_complete(task)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Applications/PyCharm.app/Contents/plugins/python/helpers-pro/pydevd_asyncio/pydevd_nest_asyncio.py", line 234, in run_until_complete
-    self._run_once()
-  File "/Applications/PyCharm.app/Contents/plugins/python/helpers-pro/pydevd_asyncio/pydevd_nest_asyncio.py", line 286, in _run_once
-    handle._run()
-  File "/opt/homebrew/Cellar/python@3.13/3.13.9_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/events.py", line 89, in _run
-    self._context.run(self._callback, *self._args)
-  File "/opt/homebrew/Cellar/python@3.13/3.13.9_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 386, in __wakeup
-    self.__step()
-  File "/Applications/PyCharm.app/Contents/plugins/python/helpers-pro/pydevd_asyncio/pydevd_nest_asyncio.py", line 394, in step
-    step_orig(task, exc)
-  File "/opt/homebrew/Cellar/python@3.13/3.13.9_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 293, in __step
-    self.__step_run_and_handle_result(exc)
-  File "/opt/homebrew/Cellar/python@3.13/3.13.9_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 304, in __step_run_and_handle_result
-    result = coro.send(None)
-             ^^^^^^^^^^^^^^^
-  File "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/src/dbmcp/main.py", line 15, in main
-    await mcp_server.start()
-  File "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/src/dbmcp/mcp_server.py", line 83, in start
-    await initialize_postgresql_manager()
-  File "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/src/dbmcp/db/postgresql_manager.py", line 272, in initialize_postgresql_manager
-    await _postgresql_manager.initialize()
-  File "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/src/dbmcp/db/postgresql_manager.py", line 110, in initialize
-    print(f"Trying to activate connection id:{conn_id}")
-    ^^^^^
-  File "/Applications/PyCharm.app/Contents/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 838, in py_line_callback
-  File "/Applications/PyCharm.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py", line 1196, in do_wait_suspend
-  File "/Applications/PyCharm.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py", line 1211, in _do_wait_suspend
-KeyboardInterrupt
-2025-11-27 14:48:19,207 [INFO] main.py:12 - Started
-2025-11-27 14:48:19,207 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
-2025-11-27 14:48:19,207 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
-2025-11-27 14:48:19,208 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
-2025-11-27 14:48:19,208 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
-2025-11-27 14:48:19,208 [DEBUG] server.py:243 - Registering handler for PromptListRequest
-2025-11-27 14:48:19,208 [DEBUG] server.py:486 - Registering handler for CallToolRequest
-2025-11-27 14:48:19,208 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
-2025-11-27 14:48:19,208 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
-2025-11-27 14:48:19,216 [INFO] factory.py:76 - All fetchers initialized
-2025-11-27 14:48:19,231 [INFO] mcp_server.py:81 - Starting MCP Database Server...
-2025-11-27 15:01:28,674 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdar@localhost:5432/omdb [id=5]
-2025-11-27 15:01:34,430 [INFO] postgresql_manager.py:50 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
-2025-11-27 15:02:20,048 [ERROR] postgresql_manager.py:61 - ❌ Connection failed for id=14: [Errno 61] Connect call failed ('192.168.139.200', 5432)
-2025-11-27 15:02:38,721 [INFO] postgresql_manager.py:117 - ✅ DB Manager initialized. Active pools: 2
-2025-11-27 15:02:46,004 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
-2025-11-27 15:03:45,592 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
-2025-11-27 15:03:45,756 [ERROR] base_events.py:1879 - Task exception was never retrieved
-future: <Task finished name='Task-1' coro=<main() done, defined at /Users/serdarmutlu/Projects/mcp/python/DBMCPServer/src/dbmcp/main.py:11> exception=KeyboardInterrupt()>
-Traceback (most recent call last):
-  File "/Applications/PyCharm.app/Contents/plugins/python-ce/helpers/pydev/pydevd.py", line 2392, in <module>
-  File "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/src/dbmcp/main.py", line 18, in <module>
-    asyncio.run(main())
-  File "/Applications/PyCharm.app/Contents/plugins/python/helpers-pro/pydevd_asyncio/pydevd_nest_asyncio.py", line 138, in run
-    return loop.run_until_complete(task)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Applications/PyCharm.app/Contents/plugins/python/helpers-pro/pydevd_asyncio/pydevd_nest_asyncio.py", line 234, in run_until_complete
-    self._run_once()
-  File "/Applications/PyCharm.app/Contents/plugins/python/helpers-pro/pydevd_asyncio/pydevd_nest_asyncio.py", line 286, in _run_once
-    handle._run()
-  File "/opt/homebrew/Cellar/python@3.13/3.13.9_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/events.py", line 89, in _run
-    self._context.run(self._callback, *self._args)
-  File "/opt/homebrew/Cellar/python@3.13/3.13.9_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 386, in __wakeup
-    self.__step()
-  File "/Applications/PyCharm.app/Contents/plugins/python/helpers-pro/pydevd_asyncio/pydevd_nest_asyncio.py", line 394, in step
-    step_orig(task, exc)
-  File "/opt/homebrew/Cellar/python@3.13/3.13.9_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 293, in __step
-    self.__step_run_and_handle_result(exc)
-  File "/opt/homebrew/Cellar/python@3.13/3.13.9_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 304, in __step_run_and_handle_result
-    result = coro.send(None)
-             ^^^^^^^^^^^^^^^
-  File "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/src/dbmcp/main.py", line 15, in main
-    await mcp_server.start()
-  File "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/src/dbmcp/mcp_server.py", line 102, in start
-    await server.serve()
-  File "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 70, in serve
-    with self.capture_signals():
-         ^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/homebrew/Cellar/python@3.13/3.13.9_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 148, in __exit__
-    next(self.gen)
-  File "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 331, in capture_signals
-    signal.raise_signal(captured_signal)
-KeyboardInterrupt
-2025-11-27 15:03:48,211 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
-2025-11-27 15:03:48,211 [INFO] main.py:12 - Started
-2025-11-27 15:03:48,211 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
-2025-11-27 15:03:48,211 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
-2025-11-27 15:03:48,211 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
-2025-11-27 15:03:48,211 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
-2025-11-27 15:03:48,211 [DEBUG] server.py:243 - Registering handler for PromptListRequest
-2025-11-27 15:03:48,211 [DEBUG] server.py:486 - Registering handler for CallToolRequest
-2025-11-27 15:03:48,211 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
-2025-11-27 15:03:48,211 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
-2025-11-27 15:03:48,214 [INFO] factory.py:76 - All fetchers initialized
-2025-11-27 15:03:48,217 [INFO] mcp_server.py:81 - Starting MCP Database Server...
-2025-11-27 15:03:48,273 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdar@localhost:5432/omdb [id=5]
-2025-11-27 15:03:48,289 [INFO] postgresql_manager.py:50 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
-2025-11-27 15:03:48,294 [ERROR] postgresql_manager.py:61 - ❌ Connection failed for id=14: [Errno 61] Connect call failed ('192.168.139.200', 5432)
-2025-11-27 15:03:48,294 [INFO] postgresql_manager.py:117 - ✅ DB Manager initialized. Active pools: 2
-2025-11-27 15:03:48,311 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
-2025-11-27 15:04:12,991 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+  File "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/.venv/lib/python3.13/site-packages/mcp/server/streamable_http.py", line 847, in message_router
+    async for session_message in write_stream_reader:
+    ...<45 lines>...
+            )
+  File "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/.venv/lib/python3.13/site-packages/anyio/abc/_streams.py", line 41, in __anext__
+    return await self.receive()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/.venv/lib/python3.13/site-packages/anyio/streams/memory.py", line 111, in receive
+    return self.receive_nowait()
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/.venv/lib/python3.13/site-packages/anyio/streams/memory.py", line 93, in receive_nowait
+    raise ClosedResourceError
+anyio.ClosedResourceError
+2025-12-01 11:49:50,675 [DEBUG] session.py:426 - Read stream closed by client
+2025-12-01 11:50:47,039 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+2025-12-01 11:50:48,702 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 11:50:48,702 [INFO] main.py:11 - Started
+2025-12-01 11:50:48,702 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 11:50:48,702 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 11:50:48,702 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 11:50:48,702 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 11:50:48,702 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 11:50:48,702 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 11:50:48,702 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 11:50:48,702 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 11:50:48,705 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 11:50:48,709 [INFO] mcp_server.py:107 - Starting MCP Database Server...
+2025-12-01 11:50:48,770 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 11:50:48,788 [INFO] postgresql_manager.py:50 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-12-01 11:50:48,830 [ERROR] postgresql_manager.py:61 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 11:50:48,830 [INFO] postgresql_manager.py:117 - ✅ DB Manager initialized. Active pools: 2
+2025-12-01 11:50:48,842 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-12-01 11:51:29,082 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+2025-12-01 11:54:00,594 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 11:54:00,594 [INFO] main.py:11 - Started
+2025-12-01 11:54:00,594 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 11:54:00,594 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 11:54:00,594 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 11:54:00,594 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 11:54:00,594 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 11:54:00,594 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 11:54:00,594 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 11:54:00,594 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 11:54:00,597 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 11:54:00,600 [INFO] mcp_server.py:107 - Starting MCP Database Server...
+2025-12-01 11:54:00,657 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 11:54:00,677 [INFO] postgresql_manager.py:50 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-12-01 11:54:00,715 [ERROR] postgresql_manager.py:61 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 11:54:00,715 [INFO] postgresql_manager.py:117 - ✅ DB Manager initialized. Active pools: 2
+2025-12-01 11:54:00,728 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-12-01 11:54:33,606 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+2025-12-01 11:59:51,152 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 11:59:51,152 [INFO] main.py:11 - Started
+2025-12-01 11:59:51,152 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 11:59:51,152 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 11:59:51,152 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 11:59:51,152 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 11:59:51,152 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 11:59:51,152 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 11:59:51,152 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 11:59:51,152 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 11:59:51,155 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 11:59:51,158 [INFO] mcp_server.py:108 - Starting MCP Database Server...
+2025-12-01 11:59:51,217 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 11:59:51,242 [INFO] postgresql_manager.py:50 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-12-01 11:59:51,283 [ERROR] postgresql_manager.py:61 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 11:59:51,283 [INFO] postgresql_manager.py:117 - ✅ DB Manager initialized. Active pools: 2
+2025-12-01 11:59:51,296 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-12-01 12:00:00,094 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+2025-12-01 12:10:39,312 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 12:10:39,312 [INFO] main.py:11 - Started
+2025-12-01 12:10:39,313 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 12:10:39,313 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 12:10:39,313 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 12:10:39,313 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 12:10:39,313 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 12:10:39,313 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 12:10:39,313 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 12:10:39,313 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 12:10:39,315 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 12:10:39,319 [INFO] mcp_server.py:126 - Starting MCP Database Server...
+2025-12-01 12:10:39,374 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 12:10:39,394 [INFO] postgresql_manager.py:50 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-12-01 12:10:39,435 [ERROR] postgresql_manager.py:61 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 12:10:39,435 [INFO] postgresql_manager.py:117 - ✅ DB Manager initialized. Active pools: 2
+2025-12-01 12:10:48,781 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 12:10:48,781 [INFO] main.py:11 - Started
+2025-12-01 12:10:48,781 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 12:10:48,781 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 12:10:48,781 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 12:10:48,781 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 12:10:48,781 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 12:10:48,781 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 12:10:48,781 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 12:10:48,781 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 12:10:48,784 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 12:10:48,788 [INFO] mcp_server.py:126 - Starting MCP Database Server...
+2025-12-01 12:10:48,845 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 12:10:48,865 [INFO] postgresql_manager.py:50 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-12-01 12:10:48,907 [ERROR] postgresql_manager.py:61 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 12:10:48,907 [INFO] postgresql_manager.py:117 - ✅ DB Manager initialized. Active pools: 2
+2025-12-01 12:11:10,043 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 12:11:10,043 [INFO] main.py:11 - Started
+2025-12-01 12:11:10,043 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 12:11:10,043 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 12:11:10,043 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 12:11:10,043 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 12:11:10,043 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 12:11:10,043 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 12:11:10,043 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 12:11:10,043 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 12:11:10,046 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 12:11:10,049 [INFO] mcp_server.py:126 - Starting MCP Database Server...
+2025-12-01 12:11:10,105 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 12:11:10,122 [INFO] postgresql_manager.py:50 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-12-01 12:11:10,160 [ERROR] postgresql_manager.py:61 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 12:11:10,160 [INFO] postgresql_manager.py:117 - ✅ DB Manager initialized. Active pools: 2
+2025-12-01 12:11:10,172 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-12-01 12:13:07,778 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+2025-12-01 12:14:06,046 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 12:14:06,047 [INFO] main.py:11 - Started
+2025-12-01 12:14:06,047 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 12:14:06,047 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 12:14:06,047 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 12:14:06,047 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 12:14:06,047 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 12:14:06,047 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 12:14:06,047 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 12:14:06,047 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 12:14:06,049 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 12:14:06,053 [INFO] mcp_server.py:108 - Starting MCP Database Server...
+2025-12-01 12:14:06,110 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 12:14:06,128 [INFO] postgresql_manager.py:50 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-12-01 12:14:06,168 [ERROR] postgresql_manager.py:61 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 12:14:06,168 [INFO] postgresql_manager.py:117 - ✅ DB Manager initialized. Active pools: 2
+2025-12-01 12:14:06,181 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-12-01 12:33:41,221 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+2025-12-01 12:33:43,243 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 12:33:43,244 [INFO] main.py:11 - Started
+2025-12-01 12:33:43,244 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 12:33:43,244 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 12:33:43,244 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 12:33:43,244 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 12:33:43,244 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 12:33:43,244 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 12:33:43,244 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 12:33:43,244 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 12:33:43,248 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 12:33:43,251 [INFO] mcp_server.py:108 - Starting MCP Database Server...
+2025-12-01 12:33:43,314 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 12:33:43,334 [INFO] postgresql_manager.py:50 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-12-01 12:33:43,376 [ERROR] postgresql_manager.py:61 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 12:33:43,376 [INFO] postgresql_manager.py:117 - ✅ DB Manager initialized. Active pools: 2
+2025-12-01 12:58:00,036 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 12:58:00,036 [INFO] main.py:11 - Started
+2025-12-01 12:58:00,036 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 12:58:00,036 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 12:58:00,037 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 12:58:00,037 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 12:58:00,037 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 12:58:00,037 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 12:58:00,037 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 12:58:00,037 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 12:58:00,040 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 12:58:00,043 [INFO] mcp_server.py:108 - Starting MCP Database Server...
+2025-12-01 12:58:00,104 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 12:58:00,127 [INFO] postgresql_manager.py:50 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-12-01 12:58:00,167 [ERROR] postgresql_manager.py:61 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 12:58:00,167 [INFO] postgresql_manager.py:117 - ✅ DB Manager initialized. Active pools: 2
+2025-12-01 12:58:14,239 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 12:58:14,239 [INFO] main.py:11 - Started
+2025-12-01 12:58:14,239 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 12:58:14,239 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 12:58:14,240 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 12:58:14,240 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 12:58:14,240 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 12:58:14,240 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 12:58:14,240 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 12:58:14,240 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 12:58:14,242 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 12:58:14,245 [INFO] mcp_server.py:108 - Starting MCP Database Server...
+2025-12-01 12:58:14,310 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 12:58:14,330 [INFO] postgresql_manager.py:50 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-12-01 12:58:14,373 [ERROR] postgresql_manager.py:61 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 12:58:14,373 [INFO] postgresql_manager.py:117 - ✅ DB Manager initialized. Active pools: 2
+2025-12-01 12:58:14,394 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-12-01 12:58:16,417 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+2025-12-01 12:59:36,203 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 12:59:36,203 [INFO] main.py:11 - Started
+2025-12-01 12:59:36,203 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 12:59:36,203 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 12:59:36,203 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 12:59:36,203 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 12:59:36,203 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 12:59:36,203 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 12:59:36,203 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 12:59:36,203 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 12:59:36,206 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 12:59:36,209 [INFO] mcp_server.py:124 - Starting MCP Database Server...
+2025-12-01 12:59:36,274 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 12:59:36,295 [INFO] postgresql_manager.py:50 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-12-01 12:59:36,339 [ERROR] postgresql_manager.py:61 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 12:59:36,339 [INFO] postgresql_manager.py:117 - ✅ DB Manager initialized. Active pools: 2
+2025-12-01 12:59:36,351 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-12-01 13:01:16,360 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+2025-12-01 13:01:17,719 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 13:01:17,720 [INFO] main.py:11 - Started
+2025-12-01 13:01:17,720 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 13:01:17,720 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 13:01:17,720 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 13:01:17,720 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 13:01:17,720 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 13:01:17,720 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 13:01:17,720 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 13:01:17,720 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 13:01:17,723 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 13:01:17,727 [INFO] mcp_server.py:125 - Starting MCP Database Server...
+2025-12-01 13:01:17,782 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 13:01:17,796 [INFO] postgresql_manager.py:50 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-12-01 13:01:17,834 [ERROR] postgresql_manager.py:61 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 13:01:17,834 [INFO] postgresql_manager.py:117 - ✅ DB Manager initialized. Active pools: 2
+2025-12-01 13:01:17,846 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-12-01 13:02:58,764 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+2025-12-01 13:03:00,272 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 13:03:00,273 [INFO] main.py:11 - Started
+2025-12-01 13:03:00,273 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 13:03:00,273 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 13:03:00,273 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 13:03:00,273 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 13:03:00,273 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 13:03:00,273 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 13:03:00,273 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 13:03:00,273 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 13:03:00,279 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 13:03:00,279 [INFO] mcp_server.py:126 - Starting MCP Database Server...
+2025-12-01 13:03:00,337 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 13:03:00,350 [INFO] postgresql_manager.py:50 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-12-01 13:03:00,387 [ERROR] postgresql_manager.py:61 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 13:03:00,387 [INFO] postgresql_manager.py:117 - ✅ DB Manager initialized. Active pools: 2
+2025-12-01 13:03:00,399 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-12-01 13:03:05,150 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+2025-12-01 13:14:46,136 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 13:14:46,136 [INFO] main.py:11 - Started
+2025-12-01 13:14:53,175 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 13:14:53,175 [INFO] main.py:11 - Started
+2025-12-01 13:14:53,175 [INFO] mcp_server.py:120 - Starting MCP Database Server...
+2025-12-01 13:14:53,228 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 13:14:53,250 [INFO] postgresql_manager.py:50 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-12-01 13:14:53,291 [ERROR] postgresql_manager.py:61 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 13:14:53,291 [INFO] postgresql_manager.py:117 - ✅ DB Manager initialized. Active pools: 2
+2025-12-01 13:14:53,291 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 13:14:53,291 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 13:14:53,291 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 13:14:53,291 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 13:14:53,291 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 13:14:53,291 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 13:14:53,291 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 13:14:53,291 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 13:14:53,298 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 13:14:53,310 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-12-01 13:23:35,540 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+2025-12-01 13:24:44,904 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 13:24:44,904 [INFO] main.py:11 - Started
+2025-12-01 13:24:44,904 [INFO] mcp_server.py:120 - Starting MCP Database Server...
+2025-12-01 13:24:44,963 [INFO] postgresql_manager.py:50 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 13:24:44,985 [INFO] postgresql_manager.py:50 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-12-01 13:24:45,029 [ERROR] postgresql_manager.py:61 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 13:24:45,029 [INFO] postgresql_manager.py:117 - ✅ DB Manager initialized. Active pools: 2
+2025-12-01 13:24:45,029 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 13:24:45,029 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 13:24:45,030 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 13:24:45,030 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 13:24:45,030 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 13:24:45,030 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 13:24:45,030 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 13:24:45,030 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 13:24:45,037 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 13:24:45,049 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-12-01 13:24:50,205 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+2025-12-01 14:48:14,823 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 14:48:14,823 [INFO] main.py:11 - Started
+2025-12-01 14:48:14,823 [INFO] mcp_server.py:119 - Starting MCP Database Server...
+2025-12-01 14:48:14,890 [INFO] postgresql_manager.py:48 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 14:48:14,917 [INFO] postgresql_manager.py:48 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-12-01 14:48:14,961 [ERROR] postgresql_manager.py:59 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 14:48:14,961 [INFO] postgresql_manager.py:115 - ✅ DB Manager initialized. Active pools: 2
+2025-12-01 14:48:14,962 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 14:48:14,962 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 14:48:14,962 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 14:48:14,962 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 14:48:14,962 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 14:48:14,962 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 14:48:14,962 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 14:48:14,962 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 14:48:14,970 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 14:48:14,992 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-12-01 14:48:29,856 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+2025-12-01 14:53:41,866 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 14:53:41,866 [INFO] main.py:11 - Started
+2025-12-01 14:53:41,866 [INFO] mcp_server.py:119 - Starting MCP Database Server...
+2025-12-01 15:12:34,119 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 15:12:34,119 [INFO] main.py:11 - Started
+2025-12-01 15:12:34,119 [INFO] mcp_server.py:118 - Starting MCP Database Server...
+2025-12-01 15:12:34,184 [INFO] postgresql_manager.py:48 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 15:12:34,207 [INFO] postgresql_manager.py:48 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-12-01 15:12:34,248 [ERROR] postgresql_manager.py:59 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 15:12:34,248 [INFO] postgresql_manager.py:115 - ✅ DB Manager initialized. Active pools: 2
+2025-12-01 15:12:34,248 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 15:12:34,248 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 15:12:34,248 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 15:12:34,249 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 15:12:34,249 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 15:12:34,249 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 15:12:34,249 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 15:12:34,249 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 15:12:34,256 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 15:12:34,276 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-12-01 15:12:44,082 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+2025-12-01 15:20:16,929 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 15:20:16,929 [INFO] main.py:10 - Started
+2025-12-01 15:20:16,929 [INFO] mcp_server.py:118 - Starting MCP Database Server...
+2025-12-01 15:20:16,986 [INFO] postgresql_manager.py:48 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 15:20:17,009 [INFO] postgresql_manager.py:48 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-12-01 15:20:17,049 [ERROR] postgresql_manager.py:59 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 15:20:17,050 [INFO] postgresql_manager.py:115 - ✅ DB Manager initialized. Active pools: 2
+2025-12-01 15:20:17,050 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 15:20:17,050 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 15:20:17,050 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 15:20:17,050 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 15:20:17,050 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 15:20:17,050 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 15:20:17,050 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 15:20:17,050 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 15:20:17,056 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 15:20:17,069 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-12-01 15:20:26,275 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+2025-12-01 15:22:30,038 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 15:22:30,038 [INFO] main.py:10 - Started
+2025-12-01 15:22:30,038 [INFO] mcp_server.py:118 - Starting MCP Database Server...
+2025-12-01 15:22:30,100 [INFO] postgresql_manager.py:48 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 15:22:30,122 [INFO] postgresql_manager.py:48 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-12-01 15:22:30,165 [ERROR] postgresql_manager.py:59 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 15:22:30,165 [INFO] postgresql_manager.py:115 - ✅ DB Manager initialized. Active pools: 2
+2025-12-01 15:22:30,165 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 15:22:30,165 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 15:22:30,165 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 15:22:30,165 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 15:22:30,165 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 15:22:30,165 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 15:22:30,165 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 15:22:30,165 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 15:22:30,173 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 15:22:30,193 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-12-01 15:22:36,466 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+2025-12-01 16:21:11,857 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 16:21:11,857 [INFO] main.py:10 - Started
+2025-12-01 16:21:11,857 [INFO] mcp_server.py:118 - Starting MCP Database Server...
+2025-12-01 16:22:02,915 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 16:22:02,916 [INFO] main.py:10 - Started
+2025-12-01 16:22:02,916 [INFO] mcp_server.py:118 - Starting MCP Database Server...
+2025-12-01 16:22:02,982 [INFO] postgresql_connection.py:45 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 16:22:03,005 [INFO] postgresql_connection.py:45 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-12-01 16:22:03,049 [ERROR] postgresql_connection.py:56 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 16:22:03,049 [INFO] postgresql_manager.py:50 - ✅ DB Manager initialized. Active pools: 2
+2025-12-01 16:22:03,049 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 16:22:03,049 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 16:22:03,049 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 16:22:03,049 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 16:22:03,049 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 16:22:03,049 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 16:22:03,049 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 16:22:03,049 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 16:22:03,057 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 16:22:03,077 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-12-01 16:22:18,142 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+2025-12-01 16:23:20,827 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 16:23:20,827 [INFO] main.py:10 - Started
+2025-12-01 16:23:20,827 [INFO] mcp_server.py:118 - Starting MCP Database Server...
+2025-12-01 16:23:20,884 [INFO] postgresql_connection.py:45 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 16:23:20,907 [INFO] postgresql_connection.py:45 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-12-01 16:23:20,948 [ERROR] postgresql_connection.py:56 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 16:23:20,948 [INFO] postgresql_manager.py:50 - ✅ DB Manager initialized. Active pools: 2
+2025-12-01 16:23:20,948 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 16:23:20,948 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 16:23:20,948 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 16:23:20,948 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 16:23:20,948 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 16:23:20,948 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 16:23:20,948 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 16:23:20,948 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 16:23:20,955 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 16:23:20,967 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-12-01 16:23:22,891 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down
+2025-12-01 16:32:43,611 [DEBUG] selector_events.py:64 - Using selector: KqueueSelector
+2025-12-01 16:32:43,611 [INFO] main.py:10 - Started
+2025-12-01 16:32:43,611 [INFO] mcp_server.py:115 - Starting MCP Database Server...
+2025-12-01 16:32:43,673 [INFO] postgresql_connection.py:45 - 🔗 Connected: serdarmutlu@localhost:5432/omdb [id=5]
+2025-12-01 16:32:43,691 [INFO] postgresql_connection.py:45 - 🔗 Connected: postgres@pg1:5432/demo [id=13]
+2025-12-01 16:32:43,733 [ERROR] postgresql_connection.py:56 - ❌ Connection failed for id=14: password authentication failed for user "serdar"
+2025-12-01 16:32:43,733 [INFO] postgresql_manager.py:50 - ✅ DB Manager initialized. Active pools: 2
+2025-12-01 16:32:43,733 [DEBUG] server.py:157 - Initializing server 'DBMCPServer 🚀'
+2025-12-01 16:32:43,734 [DEBUG] server.py:414 - Registering handler for ListToolsRequest
+2025-12-01 16:32:43,734 [DEBUG] server.py:281 - Registering handler for ListResourcesRequest
+2025-12-01 16:32:43,734 [DEBUG] server.py:301 - Registering handler for ListResourceTemplatesRequest
+2025-12-01 16:32:43,734 [DEBUG] server.py:243 - Registering handler for PromptListRequest
+2025-12-01 16:32:43,734 [DEBUG] server.py:486 - Registering handler for CallToolRequest
+2025-12-01 16:32:43,734 [DEBUG] server.py:316 - Registering handler for ReadResourceRequest
+2025-12-01 16:32:43,734 [DEBUG] server.py:265 - Registering handler for GetPromptRequest
+2025-12-01 16:32:43,741 [INFO] factory.py:76 - All fetchers initialized
+2025-12-01 16:32:43,759 [INFO] streamable_http_manager.py:110 - StreamableHTTP session manager started
+2025-12-01 16:32:45,782 [INFO] streamable_http_manager.py:114 - StreamableHTTP session manager shutting down

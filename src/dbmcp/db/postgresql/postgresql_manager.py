@@ -1,90 +1,23 @@
 # postgresql_manager.py
 import asyncio
 import logging
-from contextlib import asynccontextmanager
-from typing import Any, Dict, List, Optional
-from .metadata_manager import get_metadata_manager_instance
-from config.settings import get_settings
-
-
 import asyncpg
-from .encryption import decrypt_password   # <- mevcut dosyandaki fonksiyon
+from typing import Any, Dict, List, Optional
+from .postgresql_connection import PostgresqlConnection
+from db.metadata.metadata_repository_manager import repository_manager
+
+
 logger = logging.getLogger(__name__)
 
 
-class DatabaseConnection:
-    """Tek bir veritabanı bağlantısı için havuz sarmalayıcı."""
-
-    def __init__(self, connection_info: Dict[str, Any]):
-        # connection_info içinde: id, host, port, database_name, username, encrypted_password, ...
-        self.connection_info = connection_info
-        self.pool: Optional[asyncpg.Pool] = None
-        self.connected: bool = False
-
-    async def connect(self) -> bool:
-        """Havuzu kur ve test et."""
-        try:
-            password = None
-            enc = self.connection_info.get("encrypted_password")
-            if enc:
-                password = decrypt_password(enc)
-
-            # DİKKAT: asyncpg'de database parametresi 'database' adıdır.
-            self.pool = await asyncpg.create_pool(
-                host=self.connection_info["host"],
-                port=int(self.connection_info["port"]),
-                database=self.connection_info["database_name"],
-                user=self.connection_info["username"],
-                password=password,
-                min_size=get_settings().db_pool_min_size,
-                max_size=get_settings().db_pool_max_size,
-                timeout=10.0,
-                statement_cache_size=1024,
-            )
-
-            # Basit sağlık kontrolü
-            async with self.pool.acquire() as conn:
-                await conn.execute("SELECT 1;")
-
-            self.connected = True
-            logger.info(
-                "🔗 Connected: %s@%s:%s/%s [id=%s]",
-                self.connection_info["username"],
-                self.connection_info["host"],
-                self.connection_info["port"],
-                self.connection_info["database_name"],
-                self.connection_info.get("id"),
-            )
-            return True
-        except Exception as e:
-            self.connected = False
-            logger.error("❌ Connection failed for id=%s: %s", self.connection_info.get("id"), e)
-            return False
-
-    async def disconnect(self):
-        if self.pool:
-            await self.pool.close()
-        self.pool = None
-        self.connected = False
-        logger.info("🔌 Disconnected id=%s", self.connection_info.get("id"))
-
-    @asynccontextmanager
-    async def get_connection(self):
-        if not self.pool:
-            raise RuntimeError("Pool not initialized")
-        conn = await self.pool.acquire()
-        try:
-            yield conn
-        finally:
-            await self.pool.release(conn)
 
 
 class PostgresqlManager:
     """Çoklu veritabanı bağlantısını yönetir ve tool'lara hizmet eder."""
 
     def __init__(self):
-        self.metadata_manager = get_metadata_manager_instance()
-        self.connections: Dict[int, DatabaseConnection] = {}   # id -> DatabaseConnection
+        self.repository_manager = repository_manager
+        self.connections: Dict[int, PostgresqlConnection] = {}   # id -> DatabaseConnection
         self.active_connection: Optional[int] = None
         self._lock = asyncio.Lock()
         self._initialized = False
@@ -97,26 +30,26 @@ class PostgresqlManager:
         if self._initialized:
             return
         async with self._lock:
-            await self.metadata_manager.deactivate_all_connections()
-            rows = await self.metadata_manager.get_all_connections(connect_at_startup=True)
+            await self.repository_manager.deactivate_all_connections()
+            rows = await self.repository_manager.get_all_connections(connect_at_startup=True)
             # list_connections şifre getirmez; tekil çağrıda şifreli alanı alacağız
             for row in rows:
                 conn_id = int(row["id"] if "id" in row else row.get("connection_id", 0))
-                full = await self.metadata_manager.get_connection_with_password(conn_id)
+                full = await self.repository_manager.get_connection_with_password(conn_id)
                 if not full:
                     continue
                 # (İstersen db-type kontrolü ekle: only PostgreSQL)
-                dbc = DatabaseConnection(dict(full))
+                dbc = PostgresqlConnection(dict(full))
                 print(f"Trying to activate connection id:{conn_id}")
                 ok = await dbc.connect()
                 if ok:
                     self.connections[conn_id] = dbc
-                    await self.metadata_manager.activate_connection(conn_id)
+                    await self.repository_manager.activate_connection(conn_id)
                     print(f"{conn_id} is activated")
             self._initialized = True
             logger.info("✅ DB Manager initialized. Active pools: %s", len(self.connections))
 
-    async def cleanup(self):
+    async def close(self):
         """Uygulama kapanırken çağrılır."""
         for conn_id in list(self.connections.keys()):
             await self.disconnect(conn_id)
@@ -127,11 +60,11 @@ class PostgresqlManager:
     # ------------------------------------------------------------------ #
     async def connect_by_id(self, connection_id: int) -> bool:
         """Metadata’dan tekil kaydı şifreli al, havuz kur."""
-        full = await self.metadata_manager.get_connection_with_password(connection_id)
+        full = await self.repository_manager.get_connection_with_password(connection_id)
         if not full:
             logger.warning("⚠️ No metadata for id=%s", connection_id)
             return False
-        dbc = DatabaseConnection(dict(full))
+        dbc = PostgresqlConnection(dict(full))
         ok = await dbc.connect()
         if ok:
             self.connections[connection_id] = dbc
@@ -245,6 +178,11 @@ class PostgresqlManager:
         rows = await self.execute_query(connection_id, sql)
         return rows[0]["count"] if rows else 0
 
+    async def check_bloat(self, connection_id: int, schema_name: str, table_name: str):
+        sql = f"SELECT dead_tuple_percent FROM pgstattuple('{schema_name}.{table_name}'); "
+        rows = await self.execute_query(connection_id, sql)
+        return rows[0]["dead_tuple_percent"] if rows else 0
+
     # ------------------------------------------------------------------ #
     # Yardımcılar
     # ------------------------------------------------------------------ #
@@ -263,13 +201,4 @@ class PostgresqlManager:
             })
         return out
 
-_postgresql_manager = PostgresqlManager()
-
-def get_postgresql_manager_instance() -> PostgresqlManager:
-    return _postgresql_manager
-
-async def initialize_postgresql_manager():
-    await _postgresql_manager.initialize()
-
-async def close_postgresql_manager():
-    await _postgresql_manager.cleanup()
+postgresql_manager = PostgresqlManager() #Singleton

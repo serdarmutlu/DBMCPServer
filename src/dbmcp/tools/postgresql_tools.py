@@ -1,12 +1,8 @@
-from fastmcp import FastMCP, Context
-from db.metadata_manager import MetadataManager
-from starlette.responses import JSONResponse
-from db.postgresql_manager import get_postgresql_manager_instance
+from db.postgresql.postgresql_manager import postgresql_manager
 
 from fastmcp import FastMCP
 
 def register_postgresql_tools(mcpserver: FastMCP):
-    postgresql_manager = get_postgresql_manager_instance()
 
     @mcpserver.tool(
         name="list-all-tables",
@@ -31,6 +27,22 @@ def register_postgresql_tools(mcpserver: FastMCP):
     )
     async def list_all_columns(connection_id: int, schema_name:str, table_name: str):
         return await postgresql_manager.find_columns_by_table_name(connection_id, schema_name, table_name)
+
+    @mcpserver.tool(
+        name="check-bloat",
+        description="Checks bloating in a given table",
+        tags={"postgresql"}
+    )
+    async def check_bloat(connection_id: int, schema_name:str, table_name: str):
+        return await postgresql_manager.check_bloat(connection_id, schema_name, table_name)
+
+    @mcpserver.tool(
+        name="database-size",
+        description="Find the size of a given Postgresql database",
+        tags={"postgresql"}
+    )
+    async def check_bloat(connection_id: int, schema_name:str, table_name: str):
+        return await postgresql_manager.check_bloat(connection_id, schema_name, table_name)
 
     @mcpserver.tool(
         name="query",

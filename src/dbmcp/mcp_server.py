@@ -1,25 +1,26 @@
+import asyncio
+
 from fastmcp.tools.tool import ToolResult
 from mcp import types as mt
 
-from config import Settings
-from fastmcp import FastMCP, Context
+from config.settings import get_settings
+from fastmcp import FastMCP
 
-from db.metadata_manager import get_metadata_manager_instance, initialize_metadata_manager, close_metadata_manager
-from db.postgresql_manager import get_postgresql_manager_instance, initialize_postgresql_manager, close_postgresql_manager
-from client_manager import ClientManager
+from db.metadata.metadata_connection import metadata_connection #Singleton
+from db.metadata.metadata_repository_manager import repository_manager #Singleton
+from db.metadata.metadata_scheduler_manager import scheduler_manager #Singleton
+from db.postgresql.postgresql_manager import postgresql_manager #Singleton
 
-from tools.math_tools import register_math_tools
-from tools.metadata_tools import register_metadata_tools
+from tools import math_tools
+#from tools.math_tools import register_math_tools
+from tools.repository_tools import register_metadata_tools
 from tools.postgresql_tools import register_postgresql_tools
 
-from routes.sessions_routes import register_session_routes
 from routes.metadata_connection_routes import register_connection_routes
 from resources.test_resources import register_test_resources
 
-from eunomia_mcp import create_eunomia_middleware, utils
+from eunomia_mcp import create_eunomia_middleware
 from starlette.middleware.cors import CORSMiddleware
-from starlette.applications import Starlette
-from starlette.routing import Mount
 import uvicorn
 
 import logging
@@ -43,72 +44,86 @@ class CustomMiddleware(Middleware):
 
 
 class MCPServer():
-    def __init__(self, settings: Settings):
-        self.settings = settings
-        self.mcpserver = FastMCP(name="DBMCPServer 🚀",
-                                instructions="""
+    def __init__(self):
+        #self.mcp_app = None
+        self.server = None
+        #self.mcpserver = None
+        #self.settings = None
+
+    #def create_managers(self):
+        #self.metadata_connection = metadata_connection
+        #self.repository_manager = repository_manager_instance()
+        #self.db_manager = get_postgresql_manager_instance()
+
+    async def initialize_managers(self):
+        await metadata_connection.initialize()
+        await repository_manager.initialize()
+        await asyncio.gather(
+            scheduler_manager.initialize(),
+            postgresql_manager.initialize()
+        )
+
+    def close_managers(self):
+        postgresql_manager.close()
+        repository_manager.close()
+        metadata_connection.close()
+
+
+    async def initialize_server(self):
+        settings = get_settings()
+        mcpserver = FastMCP(name="DBMCPServer 🚀",
+                                 instructions="""
                                 -   This server provides data analysis on Postgresql databases
                                 """,
-                                stateless_http=True,
-                                json_response=True)
+                                 stateless_http=True,
+                                 json_response=True)
 
+        # Tool ve route kayıtları
+        math_tools.register_math_tools(mcpserver)
+        register_metadata_tools(mcpserver)
+        register_postgresql_tools(mcpserver)
+        register_test_resources(mcpserver)
+        # register_session_routes(self.mcpserver, self.client_manager)
+        register_connection_routes(mcpserver)
 
         # Create MCP app
-        mcp_app = self.mcpserver.http_app(path=MCP_PATH)
+        mcp_app = mcpserver.http_app(path=MCP_PATH)
 
         # Add authorization eunomia middleware
         eunomia_middleware = create_eunomia_middleware(policy_file="mcp_policies.json")
-        self.mcpserver.add_middleware(eunomia_middleware)
+        mcpserver.add_middleware(eunomia_middleware)
 
-        self.mcpserver.add_middleware(CustomMiddleware())
-
-        # Managerlar
-        self.metadata_manager = get_metadata_manager_instance()
-        self.db_manager = get_postgresql_manager_instance()
-        # self.client_manager = ClientManager()
-
-        # Tool ve route kayıtları
-        register_math_tools(self.mcpserver)
-        register_metadata_tools(self.mcpserver)
-        register_postgresql_tools(self.mcpserver)
-        register_test_resources(self.mcpserver)
-        # register_session_routes(self.mcpserver, self.client_manager)
-        register_connection_routes(self.mcpserver, self.metadata_manager, self.db_manager)
-
-
-    async def start(self):
-        """Start the MCP server."""
-        logger.info("Starting MCP Database Server...")
-        await initialize_metadata_manager()
-        await initialize_postgresql_manager()
-        # await self.mcpserver.run_async(transport="http", port=8000, path="/mcp") # path="/api/mcp" transport=http for new clients
-
-        app = self.mcpserver.http_app()
+        mcpserver.add_middleware(CustomMiddleware())
 
         origins = [
             "http://localhost:3000",
             "http://127.0.0.1:3000"
         ]
 
-        app.add_middleware(
+        mcp_app.add_middleware(
             CORSMiddleware,
-            allow_origins=["*"], # origins,  # Allow all origins for development; restrict in production
+            allow_origins=["*"],  # origins,  # Allow all origins for development; restrict in production
             allow_credentials=True,
             allow_methods=["*"],
             allow_headers=["*"],
         )
-        config = uvicorn.Config(app, host="0.0.0.0", port=8000)
-        server = uvicorn.Server(config)
-        await server.serve()
+        config = uvicorn.Config(mcp_app, host="0.0.0.0", port=8000)
+        self.server = uvicorn.Server(config)
 
-        print(__name__)
+    async def start(self):
+        """Start the MCP server."""
+        logger.info("Starting MCP Database Server...")
+        await self.initialize_managers()
+        await self.initialize_server()
+        await self.server.serve()
 
     async def stop(self):
         """Stop the MCP server."""
         logger.info("Stopping MCP Database Server...")
-        await close_postgresql_manager()
-        await close_metadata_manager()
+        self.close_managers()
+        await self.server.shutdown()
 
+mcp_server = MCPServer() #Singleton
 
 # Principal Extraction
 # The middleware automatically extracts principals from these headers:
