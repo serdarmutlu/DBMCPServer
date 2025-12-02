@@ -22,32 +22,48 @@ class PostgresqlManager:
         self._lock = asyncio.Lock()
         self._initialized = False
 
+    async def _activate_single_connection(self, row):
+        conn_id = int(row["id"] if "id" in row else row.get("connection_id", 0))
+
+        full = await self.repository_manager.get_connection_with_password(conn_id)
+        if not full:
+            return False
+
+        dbc = PostgresqlConnection(dict(full))
+        logger.info("Trying to activate connection id: %s", conn_id)
+
+        ok = await dbc.connect()
+        if ok:
+            self.connections[conn_id] = dbc
+            await self.repository_manager.activate_connection(conn_id)
+            logger.info("%s is activated", conn_id)
+            return True
+
+        return False
+
+
     # ------------------------------------------------------------------ #
     # Startup
     # ------------------------------------------------------------------ #
     async def initialize(self):
-        """Uygulama açılışında çağrılır: connect_at_startup olanlara bağlanır."""
         if self._initialized:
             return
+
         async with self._lock:
             await self.repository_manager.deactivate_all_connections()
             rows = await self.repository_manager.get_all_connections(connect_at_startup=True)
-            # list_connections şifre getirmez; tekil çağrıda şifreli alanı alacağız
-            for row in rows:
-                conn_id = int(row["id"] if "id" in row else row.get("connection_id", 0))
-                full = await self.repository_manager.get_connection_with_password(conn_id)
-                if not full:
-                    continue
-                # (İstersen db-type kontrolü ekle: only PostgreSQL)
-                dbc = PostgresqlConnection(dict(full))
-                print(f"Trying to activate connection id:{conn_id}")
-                ok = await dbc.connect()
-                if ok:
-                    self.connections[conn_id] = dbc
-                    await self.repository_manager.activate_connection(conn_id)
-                    print(f"{conn_id} is activated")
+
+            tasks = [
+                self._activate_single_connection(row)
+                for row in rows
+            ]
+
+            results = await asyncio.gather(*tasks, return_exceptions=True)
+
+            active_count = sum(1 for r in results if r is True)
             self._initialized = True
-            logger.info("✅ DB Manager initialized. Active pools: %s", len(self.connections))
+
+            logger.info("✅ DB Manager initialized. Active pools: %s", active_count)
 
     async def close(self):
         """Uygulama kapanırken çağrılır."""

@@ -1,10 +1,11 @@
 import asyncio
 
+from fastmcp.client import StreamableHttpTransport
 from fastmcp.tools.tool import ToolResult
 from mcp import types as mt
 
 from config.settings import get_settings
-from fastmcp import FastMCP
+from fastmcp import FastMCP, Client
 
 from db.metadata.metadata_connection import metadata_connection #Singleton
 from db.metadata.metadata_repository_manager import repository_manager #Singleton
@@ -17,6 +18,8 @@ from tools.repository_tools import register_metadata_tools
 from tools.postgresql_tools import register_postgresql_tools
 
 from routes.metadata_connection_routes import register_connection_routes
+from routes.job_routes import register_job_routes
+
 from resources.test_resources import register_test_resources
 
 from eunomia_mcp import create_eunomia_middleware
@@ -25,6 +28,11 @@ import uvicorn
 
 import logging
 from fastmcp.server.middleware import Middleware, MiddlewareContext, CallNext
+
+BASE_URL = "http://127.0.0.1:8000"
+API_PREFIX = "/metadata"
+MCP_URL = "http://localhost:8000/mcp"
+MCP_TOKEN = "serdar"
 
 logger = logging.getLogger(__name__)
 
@@ -43,7 +51,7 @@ class CustomMiddleware(Middleware):
         return await call_next(context)
 
 
-class MCPServer():
+class MCPServer:
     def __init__(self):
         #self.mcp_app = None
         self.server = None
@@ -55,11 +63,11 @@ class MCPServer():
         #self.repository_manager = repository_manager_instance()
         #self.db_manager = get_postgresql_manager_instance()
 
-    async def initialize_managers(self):
+    async def initialize_managers(self, mcpserver: FastMCP, mcpclient: Client):
         await metadata_connection.initialize()
         await repository_manager.initialize()
         await asyncio.gather(
-            scheduler_manager.initialize(),
+            scheduler_manager.initialize(mcpserver, mcpclient),
             postgresql_manager.initialize()
         )
 
@@ -68,6 +76,12 @@ class MCPServer():
         repository_manager.close()
         metadata_connection.close()
 
+    # --- MCP Client Helpers ---
+    def get_mcp_transport(self):
+        return StreamableHttpTransport(
+            url=MCP_URL,
+            headers={"Authorization": f"Bearer {MCP_TOKEN}"}
+        )
 
     async def initialize_server(self):
         settings = get_settings()
@@ -75,8 +89,11 @@ class MCPServer():
                                  instructions="""
                                 -   This server provides data analysis on Postgresql databases
                                 """,
-                                 stateless_http=True,
+                                 stateless_http=False,  # Changed to false because of ClosedResourceError warnings.
+                                                        # Needs to be checked in future versions of FastMCP Server
                                  json_response=True)
+        transport = self.get_mcp_transport()
+        mcpclient = Client(transport=transport)
 
         # Tool ve route kayıtları
         math_tools.register_math_tools(mcpserver)
@@ -84,6 +101,7 @@ class MCPServer():
         register_postgresql_tools(mcpserver)
         register_test_resources(mcpserver)
         # register_session_routes(self.mcpserver, self.client_manager)
+        register_job_routes(mcpserver, scheduler_manager)
         register_connection_routes(mcpserver)
 
         # Create MCP app
@@ -110,20 +128,23 @@ class MCPServer():
         config = uvicorn.Config(mcp_app, host="0.0.0.0", port=8000)
         self.server = uvicorn.Server(config)
 
+        await self.initialize_managers(mcpserver, mcpclient)
+
     async def start(self):
         """Start the MCP server."""
         logger.info("Starting MCP Database Server...")
-        await self.initialize_managers()
         await self.initialize_server()
+        await scheduler_manager.start()
         await self.server.serve()
 
     async def stop(self):
         """Stop the MCP server."""
         logger.info("Stopping MCP Database Server...")
         self.close_managers()
+        scheduler_manager.stop()
         await self.server.shutdown()
 
-mcp_server = MCPServer() #Singleton
+mcp_handler = MCPServer() #Singleton
 
 # Principal Extraction
 # The middleware automatically extracts principals from these headers:

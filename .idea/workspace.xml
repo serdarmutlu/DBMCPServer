@@ -4,23 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22d5d52c-9b56-4f23-a27e-f31db96fc58b" name="Changes" comment="Remote server setting fixes">
-      <change afterPath="$PROJECT_DIR$/src/dbmcp/db/metadata/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dbmcp/db/metadata/metadata_connection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dbmcp/db/metadata/metadata_scheduler_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dbmcp/db/postgresql/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dbmcp/db/postgresql/postgresql_connection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+    <list default="true" id="22d5d52c-9b56-4f23-a27e-f31db96fc58b" name="Changes" comment="Directory structure edited">
+      <change afterPath="$PROJECT_DIR$/src/dbmcp/routes/session_routes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dbmcp/client_manager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dbmcp/db/metadata_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbmcp/db/metadata/metadata_repository_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dbmcp/db/postgresql_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbmcp/db/postgresql/postgresql_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dbmcp/db/metadata/metadata_scheduler_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbmcp/db/metadata/metadata_scheduler_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dbmcp/db/postgresql/postgresql_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbmcp/db/postgresql/postgresql_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dbmcp/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbmcp/logs/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dbmcp/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbmcp/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dbmcp/mcp_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbmcp/mcp_server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dbmcp/routes/metadata_connection_routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbmcp/routes/metadata_connection_routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dbmcp/tools/metadata_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbmcp/tools/repository_tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dbmcp/tools/postgresql_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbmcp/tools/postgresql_tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dbmcp/routes/sessions_routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbmcp/routes/job_routes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,34 +52,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python._main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.config.executor&quot;: &quot;Run&quot;,
-    &quot;Python.encryption.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.mcp_server.executor&quot;: &quot;Run&quot;,
-    &quot;Python.metadata_manager.executor&quot;: &quot;Run&quot;,
-    &quot;Python.models.executor&quot;: &quot;Run&quot;,
-    &quot;Python.server.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/src/dbmcp/db&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.deploy.options&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python._main.executor": "Run",
+    "Python.config.executor": "Run",
+    "Python.encryption.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.mcp_server.executor": "Run",
+    "Python.metadata_manager.executor": "Run",
+    "Python.models.executor": "Run",
+    "Python.server.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/src/dbmcp/routes",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.deploy.options",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/dbmcp/routes" />
       <recent name="$PROJECT_DIR$/src/dbmcp/db" />
       <recent name="$PROJECT_DIR$/src/dbmcp" />
       <recent name="$PROJECT_DIR$/src/dbmcp/tools" />
@@ -195,7 +188,10 @@
       <workItem from="1764260248237" duration="1000" />
       <workItem from="1764314478775" duration="37533000" />
       <workItem from="1764547016292" duration="80000" />
-      <workItem from="1764577200057" duration="14867000" />
+      <workItem from="1764577200057" duration="18358000" />
+      <workItem from="1764601412656" duration="978000" />
+      <workItem from="1764602409206" duration="13503000" />
+      <workItem from="1764666944860" duration="30815000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -237,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764247469450</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Directory structure edited">
+      <option name="closed" value="true" />
+      <created>1764596124422</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1764596124422</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,7 +263,8 @@
     <MESSAGE value="Postgresql tools first implementation" />
     <MESSAGE value="Remote server interpreter extensions" />
     <MESSAGE value="Remote server setting fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remote server setting fixes" />
+    <MESSAGE value="Directory structure edited" />
+    <option name="LAST_COMMIT_MESSAGE" value="Directory structure edited" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -286,7 +291,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/dbmcp/mcp_server.py</url>
-          <line>54</line>
+          <line>62</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
       </breakpoints>
@@ -300,6 +305,6 @@
     <SUITE FILE_PATH="coverage/DBMCPServer$_main.coverage" NAME="_main Coverage Results" MODIFIED="1758618403618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dbmcp" />
     <SUITE FILE_PATH="coverage/DBMCPServer$mcp_server.coverage" NAME="mcp_server Coverage Results" MODIFIED="1761598317717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dbmcp" />
     <SUITE FILE_PATH="coverage/DBMCPServer$server.coverage" NAME="server Coverage Results" MODIFIED="1758496831572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dbmcp" />
-    <SUITE FILE_PATH="coverage/DBMCPServer$main.coverage" NAME="main Coverage Results" MODIFIED="1764595962839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dbmcp" />
+    <SUITE FILE_PATH="coverage/DBMCPServer$main.coverage" NAME="main Coverage Results" MODIFIED="1764718097682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dbmcp" />
   </component>
 </project>
