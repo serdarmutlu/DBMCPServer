@@ -6,11 +6,7 @@ from typing import Any, Dict, List, Optional
 from .postgresql_connection import PostgresqlConnection
 from db.metadata.metadata_repository_manager import repository_manager
 
-
 logger = logging.getLogger(__name__)
-
-
-
 
 class PostgresqlManager:
     """Çoklu veritabanı bağlantısını yönetir ve tool'lara hizmet eder."""
@@ -18,7 +14,7 @@ class PostgresqlManager:
     def __init__(self):
         self.repository_manager = repository_manager
         self.connections: Dict[int, PostgresqlConnection] = {}   # id -> DatabaseConnection
-        self.active_connection: Optional[int] = None
+        self.active_connection: int | None = None
         self._lock = asyncio.Lock()
         self._initialized = False
 
@@ -161,6 +157,89 @@ class PostgresqlManager:
                     await conn.execute(sql, *params)
                     return []
 
+    async def has_pgstattuple(self, connection_id: int) -> bool:
+        sql = """
+              SELECT 1
+              FROM pg_extension
+              WHERE extname = 'pgstattuple' \
+              """
+        rows = await postgresql_manager.execute_query(connection_id, sql)
+        return bool(rows)
+
+    async def check_bloat_fallback(
+            self,
+            connection_id: int,
+            schema: str,
+            table: str,
+    ):
+        sql = """
+              SELECT n_live_tup, \
+                     n_dead_tup, \
+                     last_vacuum, \
+                     last_autovacuum
+              FROM pg_stat_user_tables
+              WHERE schemaname = $1
+                AND relname = $2 \
+              """
+        rows = await postgresql_manager.execute_query(
+            connection_id,
+            sql,
+            schema, table
+        )
+
+        if not rows:
+            return 0.0, None, None
+
+        live = rows[0]["n_live_tup"]
+        dead = rows[0]["n_dead_tup"]
+
+        total = live + dead
+        dead_pct = (dead / total * 100) if total > 0 else 0.0
+
+        return dead_pct, rows[0]["last_vacuum"], rows[0]["last_autovacuum"]
+
+    async def check_single_table_bloat(
+            self,
+            connection_id: int,
+            schema: str,
+            table: str,
+            use_pgstattuple: bool):
+        if use_pgstattuple:
+            sql = """
+                  SELECT dead_tuple_percent
+                  FROM pgstattuple(
+                          format('%I.%I', $1::text, $2::text)
+                       ) \
+                  """
+            rows = await postgresql_manager.execute_query(
+                connection_id,
+                sql,
+                schema, table
+            )
+
+            dead_pct = rows[0]["dead_tuple_percent"] if rows else 0.0
+
+            return {
+                "schema": schema,
+                "table": table,
+                "dead_tuple_percent": dead_pct,
+                "source": "pgstattuple",
+            }
+
+        else:
+            dead_pct, last_vacuum, last_autovacuum = await check_bloat_fallback(
+                connection_id, schema, table
+            )
+
+            return {
+                "schema": schema,
+                "table": table,
+                "dead_tuple_percent": dead_pct,
+                "source": "pg_stat_user_tables",
+                "last_vacuum": last_vacuum,
+                "last_autovacuum": last_autovacuum,
+            }
+
     # --- READ COLUMNS ---
     async def find_columns_by_table_name(self, connection_id: int, schema_name: str, table_name: str):
         sql = """
@@ -194,10 +273,80 @@ class PostgresqlManager:
         rows = await self.execute_query(connection_id, sql)
         return rows[0]["count"] if rows else 0
 
-    async def check_bloat(self, connection_id: int, schema_name: str, table_name: str):
-        sql = f"SELECT dead_tuple_percent FROM pgstattuple('{schema_name}.{table_name}'); "
-        rows = await self.execute_query(connection_id, sql)
-        return rows[0]["dead_tuple_percent"] if rows else 0
+    async def find_schemas_and_tables(
+            self,
+            connection_id: int,
+            schema_name: str | None = None,
+            table_name: str | None = None
+    ):
+        results = []
+
+        # ✅ 1) Tek tablo
+        if schema_name and table_name:
+            return [(schema_name, table_name)]
+
+        # ✅ 2) Schema veya tüm DB
+        if schema_name:
+            sql = """
+                  SELECT table_schema, table_name
+                  FROM information_schema.tables
+                  WHERE table_type = 'BASE TABLE'
+                    AND table_schema = $1 \
+                  """
+            rows = await self.execute_query(connection_id, sql, schema_name)
+        else:
+            sql = """
+                  SELECT table_schema, table_name
+                  FROM information_schema.tables
+                  WHERE table_type = 'BASE TABLE'
+                    AND table_schema NOT IN ('pg_catalog', 'information_schema') \
+                  """
+            rows = await self.execute_query(connection_id, sql)
+
+        return [(r["table_schema"], r["table_name"]) for r in rows]
+
+    async def get_database_sizes(self, connection_id: int) -> List[Dict[str, Any]]:
+        """
+        Returns a list of databases and their sizes for the given connection.
+        """
+        sql = """
+            SELECT datname as database_name,
+                   pg_size_pretty(pg_database_size(datname)) as size_pretty,
+                   pg_database_size(datname) as size_bytes
+            FROM pg_database
+            ORDER BY pg_database_size(datname) DESC;
+        """
+        return await self.execute_query(connection_id, sql)
+
+    async def collect_stats(
+            self,
+            connection_id: int,
+            schema: str | None = None,
+            table: str | None = None
+    ) -> List[Dict[str, Any]]:
+        """
+        Collects statistics from pg_stat_user_tables.
+        """
+        base_sql = """
+                   SELECT schemaname, \
+                          relname, \
+                          n_live_tup, \
+                          n_dead_tup,
+                          last_vacuum, \
+                          last_autovacuum, \
+                          last_analyze, \
+                          last_autoanalyze
+                   FROM pg_stat_user_tables \
+                   """
+
+        if schema and table:
+            sql = base_sql + " WHERE schemaname = $1 AND relname = $2"
+            return await self.execute_query(connection_id, sql, schema, table)
+        elif schema:
+            sql = base_sql + " WHERE schemaname = $1"
+            return await self.execute_query(connection_id, sql, schema)
+        else:
+            return await self.execute_query(connection_id, base_sql)
 
     # ------------------------------------------------------------------ #
     # Yardımcılar

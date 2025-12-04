@@ -11,12 +11,14 @@ from db.metadata.metadata_connection import metadata_connection #Singleton
 from db.metadata.metadata_repository_manager import repository_manager #Singleton
 from db.metadata.metadata_scheduler_manager import scheduler_manager #Singleton
 from db.postgresql.postgresql_manager import postgresql_manager #Singleton
+from db.metadata.metadata_trend_manager import trend_manager #Singleton
 
 from tools import math_tools
 #from tools.math_tools import register_math_tools
 from tools.repository_tools import register_metadata_tools
 from tools.postgresql_tools import register_postgresql_tools
-
+from tools.postgresql_observability_tools import register_postgresql_observability_tools
+from tools.postgresql_trend_tools import register_postgresql_trend_tools
 from routes.metadata_connection_routes import register_connection_routes
 from routes.job_routes import register_job_routes
 
@@ -68,10 +70,12 @@ class MCPServer:
         await repository_manager.initialize()
         await asyncio.gather(
             scheduler_manager.initialize(mcpserver, mcpclient),
-            postgresql_manager.initialize()
+            postgresql_manager.initialize(),
+            trend_manager.initialize()
         )
 
     def close_managers(self):
+        trend_manager.close()
         postgresql_manager.close()
         repository_manager.close()
         metadata_connection.close()
@@ -99,6 +103,9 @@ class MCPServer:
         math_tools.register_math_tools(mcpserver)
         register_metadata_tools(mcpserver)
         register_postgresql_tools(mcpserver)
+        register_postgresql_observability_tools(mcpserver)
+        register_postgresql_trend_tools(mcpserver)
+        register_postgresql_trend_tools(mcpserver)
         register_test_resources(mcpserver)
         # register_session_routes(self.mcpserver, self.client_manager)
         register_job_routes(mcpserver, scheduler_manager)

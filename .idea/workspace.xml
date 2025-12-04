@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22d5d52c-9b56-4f23-a27e-f31db96fc58b" name="Changes" comment="Directory structure edited">
-      <change afterPath="$PROJECT_DIR$/src/dbmcp/routes/session_routes.py" afterDir="false" />
+    <list default="true" id="22d5d52c-9b56-4f23-a27e-f31db96fc58b" name="Changes" comment="Initial implementation of schedıler">
+      <change afterPath="$PROJECT_DIR$/src/dbmcp/db/metadata/metadata_trend_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dbmcp/tools/postgresql_observability_tools.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dbmcp/tools/postgresql_trend_tools.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dbmcp/db/metadata/metadata_scheduler_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbmcp/db/metadata/metadata_scheduler_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dbmcp/db/postgresql/postgresql_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbmcp/db/postgresql/postgresql_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dbmcp/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbmcp/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dbmcp/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbmcp/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dbmcp/mcp_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbmcp/mcp_server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dbmcp/routes/sessions_routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbmcp/routes/job_routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dbmcp/tools/postgresql_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbmcp/tools/postgresql_tools.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +68,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/src/dbmcp/routes",
+    "last_opened_file_path": "/Users/serdarmutlu/Projects/mcp/python/DBMCPServer/src/dbmcp/db/metadata",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -80,11 +80,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/dbmcp/db/metadata" />
+      <recent name="$PROJECT_DIR$/src/dbmcp/tools" />
       <recent name="$PROJECT_DIR$/src/dbmcp/routes" />
       <recent name="$PROJECT_DIR$/src/dbmcp/db" />
       <recent name="$PROJECT_DIR$/src/dbmcp" />
-      <recent name="$PROJECT_DIR$/src/dbmcp/tools" />
-      <recent name="$PROJECT_DIR$/src/dbmcp/config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/dbmcp/db/postgresql" />
@@ -191,7 +191,10 @@
       <workItem from="1764577200057" duration="18358000" />
       <workItem from="1764601412656" duration="978000" />
       <workItem from="1764602409206" duration="13503000" />
-      <workItem from="1764666944860" duration="30815000" />
+      <workItem from="1764666944860" duration="34504000" />
+      <workItem from="1764759904097" duration="20435000" />
+      <workItem from="1764797283385" duration="1240000" />
+      <workItem from="1764799426482" duration="24583000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -241,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764596124422</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Initial implementation of schedıler">
+      <option name="closed" value="true" />
+      <created>1764718276664</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1764718276664</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +275,8 @@
     <MESSAGE value="Remote server interpreter extensions" />
     <MESSAGE value="Remote server setting fixes" />
     <MESSAGE value="Directory structure edited" />
-    <option name="LAST_COMMIT_MESSAGE" value="Directory structure edited" />
+    <MESSAGE value="Initial implementation of schedıler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial implementation of schedıler" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -291,8 +303,33 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/dbmcp/mcp_server.py</url>
-          <line>62</line>
+          <line>64</line>
           <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/dbmcp/db/postgresql/postgresql_manager.py</url>
+          <line>357</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/dbmcp/db/postgresql/postgresql_manager.py</url>
+          <line>304</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/dbmcp/tools/postgresql_tools.py</url>
+          <line>61</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/dbmcp/db/metadata/metadata_trend_manager.py</url>
+          <line>74</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/dbmcp/tools/postgresql_trend_tools.py</url>
+          <line>70</line>
+          <option name="timeStamp" value="51" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -305,6 +342,6 @@
     <SUITE FILE_PATH="coverage/DBMCPServer$_main.coverage" NAME="_main Coverage Results" MODIFIED="1758618403618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dbmcp" />
     <SUITE FILE_PATH="coverage/DBMCPServer$mcp_server.coverage" NAME="mcp_server Coverage Results" MODIFIED="1761598317717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dbmcp" />
     <SUITE FILE_PATH="coverage/DBMCPServer$server.coverage" NAME="server Coverage Results" MODIFIED="1758496831572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dbmcp" />
-    <SUITE FILE_PATH="coverage/DBMCPServer$main.coverage" NAME="main Coverage Results" MODIFIED="1764718097682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dbmcp" />
+    <SUITE FILE_PATH="coverage/DBMCPServer$main.coverage" NAME="main Coverage Results" MODIFIED="1764862620593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dbmcp" />
   </component>
 </project>
