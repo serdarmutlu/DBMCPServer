@@ -1,9 +1,8 @@
-from typing import Optional
-
-from asyncpg.pool import Pool
-from config.settings import get_settings
-from .metadata_connection import metadata_connection
 import logging
+
+from typing import Optional
+from asyncpg.pool import Pool
+from .metadata_connection import metadata_connection
 
 logger = logging.getLogger(__name__)
 
@@ -17,6 +16,7 @@ class RepositoryManager:
 
     async def close(self):
         self._metadata_connection_pool = None
+
 
     # --- database_types ---
     async def get_all_types(self):

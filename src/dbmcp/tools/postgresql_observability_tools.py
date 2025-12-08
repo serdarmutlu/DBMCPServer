@@ -1,28 +1,11 @@
 # tools/postgresql_observability_tools.py
 
-import json
-from typing import Optional
-
 from fastmcp import FastMCP, Context
 from fastmcp.tools.tool import ToolResult
-from mcp import types as mt
 
 from db.postgresql.postgresql_manager import postgresql_manager
 
-
-def _text_result(payload: dict | list, title: Optional[str] = None) -> ToolResult:
-    """JSON çıktıyı TextContent olarak döndürmek için yardımcı fonksiyon."""
-    text = json.dumps(payload, indent=2, default=str)
-    if title:
-        text = f"# {title}\n\n```json\n{text}\n```"
-    else:
-        text = f"```json\n{text}\n```"
-
-    return ToolResult(
-        content=[
-            mt.TextContent(type="text", text=text)
-        ]
-    )
+from utils.generic import text_result as text_result
 
 
 def register_postgresql_observability_tools(mcp: FastMCP) -> None:
@@ -66,13 +49,14 @@ def register_postgresql_observability_tools(mcp: FastMCP) -> None:
         WHERE datname = current_database();
         """
         rows = await postgresql_manager.execute_query(connection_id, sql)
-        return _text_result(rows, title="PostgreSQL Health Overview")
+        return text_result(rows, title="PostgreSQL Health Overview")
 
     # 2️⃣ CONNECTION RAPORU
     @mcp.tool(
         name="pg_connections_report",
         description="Aktif/idle/idle in transaction bağlantı sayıları, en uzun transaction süreleri vb."
     )
+
     async def pg_connections_report(
         ctx: Context,
         connection_id: int,
@@ -111,7 +95,7 @@ def register_postgresql_observability_tools(mcp: FastMCP) -> None:
             "summary": summary[0] if summary else {},
             "top_long_running": details,
         }
-        return _text_result(payload, title="PostgreSQL Connections Report")
+        return text_result(payload, title="PostgreSQL Connections Report")
 
     # 3️⃣ TOP QUERIES (pg_stat_statements)
     @mcp.tool(
@@ -148,7 +132,7 @@ def register_postgresql_observability_tools(mcp: FastMCP) -> None:
             sql,
             limit
         )
-        return _text_result(rows, title=f"Top {limit} Queries (pg_stat_statements)")
+        return text_result(rows, title=f"Top {limit} Queries (pg_stat_statements)")
 
     # 4️⃣ BLOAT RAPORU (pgstattuple varsa + fallback)
     @mcp.tool(
@@ -197,7 +181,7 @@ def register_postgresql_observability_tools(mcp: FastMCP) -> None:
                 "tables": candidates,
                 "note": "pgstattuple yüklü değil; sadece pg_stat_user_tables bazlı tahmini bloat bilgisi gösteriliyor."
             }
-            return _text_result(payload, title="Table Bloat Report (Fallback Mode)")
+            return text_result(payload, title="Table Bloat Report (Fallback Mode)")
 
         # pgstattuple varsa, her tablo için detaylı bloat ölç
         detailed = []
@@ -228,7 +212,7 @@ def register_postgresql_observability_tools(mcp: FastMCP) -> None:
             "mode": "pgstattuple",
             "tables": detailed,
         }
-        return _text_result(payload, title="Table Bloat Report (pgstattuple)")
+        return text_result(payload, title="Table Bloat Report (pgstattuple)")
 
     # 5️⃣ AUTOVACUUM ACTIVITY
     @mcp.tool(
@@ -265,7 +249,7 @@ def register_postgresql_observability_tools(mcp: FastMCP) -> None:
         progress = await postgresql_manager.execute_query(connection_id, progress_sql)
         stats = await postgresql_manager.execute_query(connection_id, stats_sql)
 
-        return _text_result(
+        return text_result(
             {
                 "active_vacuum_processes": progress,
                 "table_health": stats
@@ -328,7 +312,7 @@ def register_postgresql_observability_tools(mcp: FastMCP) -> None:
                 """
             )
 
-        return _text_result(payload, title="WAL & Checkpoint Activity")
+        return text_result(payload, title="WAL & Checkpoint Activity")
 
     # 7️⃣ KAPASİTE / BOYUT RAPORU
     @mcp.tool(
@@ -363,7 +347,7 @@ def register_postgresql_observability_tools(mcp: FastMCP) -> None:
             "databases": db_sizes,
             "top_tables": tbl_sizes,
         }
-        return _text_result(payload, title="PostgreSQL Capacity Report")
+        return text_result(payload, title="PostgreSQL Capacity Report")
 
     # 8️⃣ REPLICATION STATUS
     @mcp.tool(
@@ -397,4 +381,4 @@ def register_postgresql_observability_tools(mcp: FastMCP) -> None:
             "replicas": rows,
             "note": "Bu rapor yalnızca primary/leader üzerinde anlamlıdır. Standby'da pg_stat_replication boş dönecektir."
         }
-        return _text_result(payload, title="Replication Status")
+        return text_result(payload, title="Replication Status")

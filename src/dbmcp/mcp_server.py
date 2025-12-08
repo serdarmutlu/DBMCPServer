@@ -105,14 +105,13 @@ class MCPServer:
         register_postgresql_tools(mcpserver)
         register_postgresql_observability_tools(mcpserver)
         register_postgresql_trend_tools(mcpserver)
-        register_postgresql_trend_tools(mcpserver)
         register_test_resources(mcpserver)
         # register_session_routes(self.mcpserver, self.client_manager)
         register_job_routes(mcpserver, scheduler_manager)
         register_connection_routes(mcpserver)
 
         # Create MCP app
-        mcp_app = mcpserver.http_app(path=MCP_PATH)
+        mcp_app = mcpserver.http_app(path=MCP_PATH, transport="streamable-http")
 
         # Add authorization eunomia middleware
         eunomia_middleware = create_eunomia_middleware(policy_file="mcp_policies.json")

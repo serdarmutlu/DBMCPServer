@@ -10,20 +10,8 @@ from mcp import types as mt
 from db.postgresql.postgresql_manager import postgresql_manager
 from db.metadata.metadata_trend_manager import trend_manager
 
+from utils.generic import text_result as text_result
 
-def _text_result(payload: dict | list, title: Optional[str] = None) -> ToolResult:
-    """JSON çıktıyı TextContent olarak döndürmek için yardımcı fonksiyon."""
-    text = json.dumps(payload, indent=2, default=str)
-    if title:
-        text = f"# {title}\n\n```json\n{text}\n```"
-    else:
-        text = f"```json\n{text}\n```"
-
-    return ToolResult(
-        content=[
-            mt.TextContent(type="text", text=text)
-        ]
-    )
 
 def register_postgresql_trend_tools(mcp: FastMCP) -> None:
     @mcp.tool(
@@ -69,7 +57,7 @@ def register_postgresql_trend_tools(mcp: FastMCP) -> None:
                   """
 
             rows = await trend_manager.execute_query(sql, str(days))
-            return _text_result(rows, title="Capacity Growth Trend (Database)")
+            return text_result(rows, title="Capacity Growth Trend (Database)")
 
         # ---- TABLE SCOPE ----
         sql = """
@@ -101,7 +89,7 @@ def register_postgresql_trend_tools(mcp: FastMCP) -> None:
               """
 
         rows = await trend_manager.execute_query(sql, str(days), limit)
-        return _text_result(rows, title=f"Capacity Growth Trend (Top {limit} Tables)")
+        return text_result(rows, title=f"Capacity Growth Trend (Top {limit} Tables)")
 
     @mcp.tool(
         name="pg_capacity_growth_trend_database_capacity_insert",

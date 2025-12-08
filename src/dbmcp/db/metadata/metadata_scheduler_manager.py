@@ -1,3 +1,4 @@
+import logging
 import json
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
@@ -6,13 +7,9 @@ from apscheduler.triggers.cron import CronTrigger
 from typing import Optional, Any
 from asyncpg.pool import Pool
 from fastmcp import Client, FastMCP
-
 from .metadata_connection import metadata_connection
 
-import logging
-
 logger = logging.getLogger(__name__)
-
 
 class SchedulerManager:
     def __init__(self):

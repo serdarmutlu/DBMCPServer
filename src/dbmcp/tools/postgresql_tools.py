@@ -9,7 +9,7 @@ def register_postgresql_tools(mcpserver: FastMCP):
 
     @mcpserver.tool(
         name="list-all-tables",
-        description="List all tables in connected Postgresql",
+        description="List all tables in connected Postgresql database",
         tags={"postgresql"}
     )
     async def list_all_tables(connection_id: int):

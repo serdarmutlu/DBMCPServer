@@ -1,9 +1,9 @@
-from typing import Optional
-
+import logging
 import asyncpg
+
 from asyncpg.pool import Pool
 from config.settings import get_settings
-import logging
+from typing import Optional
 
 logger = logging.getLogger(__name__)
 
