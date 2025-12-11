@@ -21,6 +21,7 @@ from tools.postgresql_observability_tools import register_postgresql_observabili
 from tools.postgresql_trend_tools import register_postgresql_trend_tools
 from routes.metadata_connection_routes import register_connection_routes
 from routes.job_routes import register_job_routes
+from routes.introspection_routes import register_introspection_routes
 
 from resources.test_resources import register_test_resources
 
@@ -93,11 +94,11 @@ class MCPServer:
                                  instructions="""
                                 -   This server provides data analysis on Postgresql databases
                                 """,
-                                 stateless_http=False,  # Changed to false because of ClosedResourceError warnings.
+                                 stateless_http=False,  # This is preferred mode for state management. Changing to true also raises ClosedResourceError warnings.
                                                         # Needs to be checked in future versions of FastMCP Server
                                  json_response=True)
         transport = self.get_mcp_transport()
-        mcpclient = Client(transport=transport)
+        mcpclient = Client(transport=transport) # Not possible to make in-memory connection because of header authorization
 
         # Tool ve route kayıtları
         math_tools.register_math_tools(mcpserver)
@@ -109,6 +110,7 @@ class MCPServer:
         # register_session_routes(self.mcpserver, self.client_manager)
         register_job_routes(mcpserver, scheduler_manager)
         register_connection_routes(mcpserver)
+        register_introspection_routes(mcpserver)
 
         # Create MCP app
         mcp_app = mcpserver.http_app(path=MCP_PATH, transport="streamable-http")
@@ -131,7 +133,7 @@ class MCPServer:
             allow_methods=["*"],
             allow_headers=["*"],
         )
-        config = uvicorn.Config(mcp_app, host="0.0.0.0", port=8000)
+        config = uvicorn.Config(mcp_app, host="0.0.0.0", port=8000, log_level=logging.DEBUG)
         self.server = uvicorn.Server(config)
 
         await self.initialize_managers(mcpserver, mcpclient)
