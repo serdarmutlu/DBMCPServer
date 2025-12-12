@@ -28,11 +28,11 @@ class Settings(BaseSettings):
     session_timeout_minutes: int = Field(default=30)
 
     # Metadata DB
-    metadata_db_host: str = Field(default="localhost")
-    metadata_db_port: int = Field(default=5433)
+    metadata_db_host: str = Field(default="postgresql")
+    metadata_db_port: int = Field(default=5432)
     metadata_database_name: str = Field(default="mcp_metadata")
-    metadata_db_username: str = Field(default="postgres")
-    metadata_db_password: str = Field(default="postgres")
+    metadata_db_username: str = Field(default="serdar")
+    metadata_db_password: str = Field(default="serdar")
     metadata_db_url: Optional[str] = None
 
     # Encryption
