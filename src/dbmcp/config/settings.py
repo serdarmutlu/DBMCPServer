@@ -14,10 +14,14 @@ class Settings(BaseSettings):
 
     if socket.gethostname() == "Serdars-MBP-M3":
         model_config = SettingsConfigDict(env_file=BASE_DIR / "mac.env", env_file_encoding="utf-8")
+        print("mac")
     elif socket.gethostname() == "db-mcp-server":
         model_config = SettingsConfigDict(env_file=BASE_DIR / "oci.env", env_file_encoding="utf-8")
     else:
         model_config = SettingsConfigDict(env_file=BASE_DIR / "default.env", env_file_encoding="utf-8")
+        print("other")
+
+    print(model_config)
 
     # Session
     session_timeout_minutes: int = Field(default=30)
