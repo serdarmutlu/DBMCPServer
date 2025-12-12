@@ -13,13 +13,14 @@ class Settings(BaseSettings):
 
 
     if socket.gethostname() == "Serdars-MBP-M3":
-        model_config = SettingsConfigDict(env_file=BASE_DIR / "mac.env", env_file_encoding="utf-8")
         print("mac")
+        model_config = SettingsConfigDict(env_file=BASE_DIR / "mac.env", env_file_encoding="utf-8")
     elif socket.gethostname() == "db-mcp-server":
+        print("cloud")
         model_config = SettingsConfigDict(env_file=BASE_DIR / "oci.env", env_file_encoding="utf-8")
     else:
-        model_config = SettingsConfigDict(env_file=BASE_DIR / "default.env", env_file_encoding="utf-8")
         print("other")
+        model_config = SettingsConfigDict(env_file=BASE_DIR / "default.env", env_file_encoding="utf-8")
 
     print(model_config)
 
