@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22d5d52c-9b56-4f23-a27e-f31db96fc58b" name="Changes" comment="Minor fixes after trend analysis">
-      <change beforePath="$PROJECT_DIR$/.idea/DBMCPServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DBMCPServer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="22d5d52c-9b56-4f23-a27e-f31db96fc58b" name="Changes" comment="Tools, resources, and prompts endpoints">
+      <change afterPath="$PROJECT_DIR$/src/dbmcp/routes/models_routes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dbmcp/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbmcp/logs/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dbmcp/mcp_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbmcp/mcp_server.py" afterDir="false" />
@@ -55,7 +54,7 @@
     &quot;Python._main.executor&quot;: &quot;Run&quot;,
     &quot;Python.config.executor&quot;: &quot;Run&quot;,
     &quot;Python.encryption.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Debug&quot;,
     &quot;Python.mcp_server.executor&quot;: &quot;Run&quot;,
     &quot;Python.metadata_manager.executor&quot;: &quot;Run&quot;,
     &quot;Python.models.executor&quot;: &quot;Run&quot;,
@@ -201,6 +200,9 @@
       <workItem from="1765269468248" duration="16725000" />
       <workItem from="1765391980350" duration="6125000" />
       <workItem from="1765463297634" duration="629000" />
+      <workItem from="1765464846535" duration="10395000" />
+      <workItem from="1765496022681" duration="4000" />
+      <workItem from="1765496397955" duration="170000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -274,7 +276,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765231495011</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Tools, resources, and prompts endpoints">
+      <option name="closed" value="true" />
+      <created>1765465369237</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1765465369237</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +310,8 @@
     <MESSAGE value="Initial implementation of schedıler" />
     <MESSAGE value="Trend analysis" />
     <MESSAGE value="Minor fixes after trend analysis" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes after trend analysis" />
+    <MESSAGE value="Tools, resources, and prompts endpoints" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tools, resources, and prompts endpoints" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -327,7 +338,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/dbmcp/mcp_server.py</url>
-          <line>64</line>
+          <line>65</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -356,14 +367,14 @@
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/dbmcp/mcp_server.py</url>
-          <line>99</line>
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/dbmcp/db/metadata/metadata_scheduler_manager.py</url>
           <line>134</line>
           <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/dbmcp/routes/models_routes.py</url>
+          <line>74</line>
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -376,6 +387,6 @@
     <SUITE FILE_PATH="coverage/DBMCPServer$_main.coverage" NAME="_main Coverage Results" MODIFIED="1758618403618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dbmcp" />
     <SUITE FILE_PATH="coverage/DBMCPServer$mcp_server.coverage" NAME="mcp_server Coverage Results" MODIFIED="1761598317717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dbmcp" />
     <SUITE FILE_PATH="coverage/DBMCPServer$server.coverage" NAME="server Coverage Results" MODIFIED="1758496831572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dbmcp" />
-    <SUITE FILE_PATH="coverage/DBMCPServer$main.coverage" NAME="main Coverage Results" MODIFIED="1765463303833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dbmcp" />
+    <SUITE FILE_PATH="coverage/DBMCPServer$main.coverage" NAME="main Coverage Results" MODIFIED="1765496457516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/dbmcp" />
   </component>
 </project>

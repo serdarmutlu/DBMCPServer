@@ -22,6 +22,7 @@ from tools.postgresql_trend_tools import register_postgresql_trend_tools
 from routes.metadata_connection_routes import register_connection_routes
 from routes.job_routes import register_job_routes
 from routes.introspection_routes import register_introspection_routes
+from routes.models_routes import register_model_routes
 
 from resources.test_resources import register_test_resources
 
@@ -111,6 +112,7 @@ class MCPServer:
         register_job_routes(mcpserver, scheduler_manager)
         register_connection_routes(mcpserver)
         register_introspection_routes(mcpserver)
+        register_model_routes(mcpserver, None)
 
         # Create MCP app
         mcp_app = mcpserver.http_app(path=MCP_PATH, transport="streamable-http")
