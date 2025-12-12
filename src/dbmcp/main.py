@@ -1,4 +1,5 @@
 import logging.config
+from config.settings import Settings
 from config.logging_config import LOGGING_CONFIG
 import asyncio
 
@@ -11,6 +12,7 @@ async def main():
     await mcp_handler.start()
 
 if __name__ == "__main__":
+    settings = Settings()
     asyncio.run(main())
 
 # End of file
