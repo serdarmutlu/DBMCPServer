@@ -93,7 +93,7 @@ class TrendManager:
 trend_manager = TrendManager()  # Singleton
 
 
-# CREATE TABLE IF NOT EXISTS pg_capacity_snapshots (
+# CREATE TABLE IF NOT EXISTS trends.pg_capacity_snapshots (
 #     snapshot_ts     timestamptz NOT NULL DEFAULT now(),
 #     scope           text        NOT NULL, -- 'db' | 'table' | 'index'
 #     dbname          text        NOT NULL,
