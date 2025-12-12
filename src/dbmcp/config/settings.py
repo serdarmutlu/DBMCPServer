@@ -3,18 +3,21 @@ from typing import Optional
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 import socket
+from pathlib import Path
 
 logger = logging.getLogger(__name__)
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 class Settings(BaseSettings):
     print("Host Name is:", socket.gethostname())
 
+
     if socket.gethostname() == "Serdars-MBP-M3":
-        model_config = SettingsConfigDict(env_file="mac.env", env_file_encoding="utf-8")
+        model_config = SettingsConfigDict(env_file=BASE_DIR / "mac.env", env_file_encoding="utf-8")
     elif socket.gethostname() == "db-mcp-server":
-        model_config = SettingsConfigDict(env_file="oci.env", env_file_encoding="utf-8")
+        model_config = SettingsConfigDict(env_file=BASE_DIR / "oci.env", env_file_encoding="utf-8")
     else:
-        model_config = SettingsConfigDict(env_file="default.env", env_file_encoding="utf-8")
+        model_config = SettingsConfigDict(env_file=BASE_DIR / "default.env", env_file_encoding="utf-8")
 
     # Session
     session_timeout_minutes: int = Field(default=30)
