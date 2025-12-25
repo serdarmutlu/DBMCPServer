@@ -13,7 +13,6 @@ from db.metadata.metadata_scheduler_manager import scheduler_manager #Singleton
 from db.postgresql.postgresql_manager import postgresql_manager #Singleton
 from db.metadata.metadata_trend_manager import trend_manager #Singleton
 
-from tools import math_tools
 #from tools.math_tools import register_math_tools
 from tools.repository_tools import register_metadata_tools
 from tools.postgresql_tools import register_postgresql_tools
@@ -23,8 +22,10 @@ from routes.metadata_connection_routes import register_connection_routes
 from routes.job_routes import register_job_routes
 from routes.introspection_routes import register_introspection_routes
 from routes.models_routes import register_model_routes
+from routes.chat_routes import register_chat_routes
+from routes.settings_routes import register_settings_routes
 
-from resources.test_resources import register_test_resources
+# from resources.test_resources import register_test_resources
 
 from eunomia_mcp import create_eunomia_middleware
 from starlette.middleware.cors import CORSMiddleware
@@ -102,17 +103,17 @@ class MCPServer:
         mcpclient = Client(transport=transport) # Not possible to make in-memory connection because of header authorization
 
         # Tool ve route kayıtları
-        math_tools.register_math_tools(mcpserver)
         register_metadata_tools(mcpserver)
         register_postgresql_tools(mcpserver)
         register_postgresql_observability_tools(mcpserver)
         register_postgresql_trend_tools(mcpserver)
-        register_test_resources(mcpserver)
         # register_session_routes(self.mcpserver, self.client_manager)
         register_job_routes(mcpserver, scheduler_manager)
         register_connection_routes(mcpserver)
         register_introspection_routes(mcpserver)
         register_model_routes(mcpserver, None)
+        register_chat_routes(mcpserver)
+        register_settings_routes(mcpserver)
 
         # Create MCP app
         mcp_app = mcpserver.http_app(path=MCP_PATH, transport="streamable-http")

@@ -11,17 +11,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 class Settings(BaseSettings):
     print("Host Name is:", socket.gethostname())
 
-    #
-    # if socket.gethostname() == "Serdars-MBP-M3":
-    #     print("mac")
-    #     model_config = SettingsConfigDict(env_file=BASE_DIR / "mac.env", env_file_encoding="utf-8")
-    # elif socket.gethostname() == "db-mcp-server":
-    #     print("cloud")
-    #     model_config = SettingsConfigDict(env_file=BASE_DIR / "oci.env", env_file_encoding="utf-8")
-    # else:
-    #     print("other")
-    #     model_config = SettingsConfigDict(env_file=BASE_DIR / "default.env", env_file_encoding="utf-8")
-    model_config = SettingsConfigDict(env_file=BASE_DIR / "default.env", env_file_encoding="utf-8")
+
+    if socket.gethostname() == "Serdars-MBP-M3":
+        print("mac")
+        model_config = SettingsConfigDict(env_file=BASE_DIR / "mac.env", env_file_encoding="utf-8")
+    elif socket.gethostname() == "db-mcp-server":
+        print("cloud")
+        model_config = SettingsConfigDict(env_file=BASE_DIR / "oci.env", env_file_encoding="utf-8")
+    else:
+        print("other")
+        model_config = SettingsConfigDict(env_file=BASE_DIR / "default.env", env_file_encoding="utf-8")
+
     print(model_config)
 
     # Session
@@ -34,6 +34,7 @@ class Settings(BaseSettings):
     metadata_db_username: str = Field(default="serdar")
     metadata_db_password: str = Field(default="serdar")
     metadata_db_url: Optional[str] = None
+    metadata_duckdb_path: str = Field(default="metadata.duckdb")
 
     # Encryption
     encryption_key: Optional[str] = None

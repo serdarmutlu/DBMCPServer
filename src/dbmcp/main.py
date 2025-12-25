@@ -2,7 +2,6 @@ import logging.config
 from config.settings import Settings
 from config.logging_config import LOGGING_CONFIG
 import asyncio
-
 from mcp_server import mcp_handler #Singleton
 
 logging.config.dictConfig(LOGGING_CONFIG)
@@ -12,9 +11,7 @@ async def main():
     await mcp_handler.start()
 
 if __name__ == "__main__":
-    print("Before settings")
     settings = Settings()
-    print("After settings")
     asyncio.run(main())
 
 # End of file
